@@ -18,6 +18,8 @@
 		04373F1D245CFE8100583C58 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1C245CFE8100583C58 /* RegisterViewController.swift */; };
 		04373F1F245CFE9200583C58 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1E245CFE9200583C58 /* AccountViewController.swift */; };
 		04373F21245CFF2500583C58 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F20245CFF2500583C58 /* UIView+AddBorder.swift */; };
+		04373F23245D01F700583C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04373F22245D01F700583C58 /* GoogleService-Info.plist */; };
+		22E7861BF4581CA2468228A6 /* Pods_SmashRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		04373F1C245CFE8100583C58 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		04373F1E245CFE9200583C58 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		04373F20245CFF2500583C58 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddBorder.swift"; sourceTree = "<group>"; };
+		04373F22245D01F700583C58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4DC6CE520A54C70BF7CAB49 /* Pods-SmashRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecord.release.xcconfig"; path = "Target Support Files/Pods-SmashRecord/Pods-SmashRecord.release.xcconfig"; sourceTree = "<group>"; };
+		CFB36A46B522D35AC105B54C /* Pods-SmashRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecord.debug.xcconfig"; path = "Target Support Files/Pods-SmashRecord/Pods-SmashRecord.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E7861BF4581CA2468228A6 /* Pods_SmashRecord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,8 @@
 			children = (
 				04373F01245CF59000583C58 /* SmashRecord */,
 				04373F00245CF59000583C58 /* Products */,
+				3BE6E5B842F87F6598009AF7 /* Pods */,
+				D5177F7C0F2DA3DF489190EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +82,7 @@
 				04373F0D245CF59100583C58 /* Assets.xcassets */,
 				04373F0F245CF59100583C58 /* LaunchScreen.storyboard */,
 				04373F12245CF59100583C58 /* Info.plist */,
+				04373F22245D01F700583C58 /* GoogleService-Info.plist */,
 			);
 			path = SmashRecord;
 			sourceTree = "<group>";
@@ -98,6 +108,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3BE6E5B842F87F6598009AF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFB36A46B522D35AC105B54C /* Pods-SmashRecord.debug.xcconfig */,
+				B4DC6CE520A54C70BF7CAB49 /* Pods-SmashRecord.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D5177F7C0F2DA3DF489190EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04373F15245CF59100583C58 /* Build configuration list for PBXNativeTarget "SmashRecord" */;
 			buildPhases = (
+				90D1042CB8CC6B04DCC7C4C3 /* [CP] Check Pods Manifest.lock */,
 				04373EFB245CF59000583C58 /* Sources */,
 				04373EFC245CF59000583C58 /* Frameworks */,
 				04373EFD245CF59000583C58 /* Resources */,
+				55583A60FFDF9342E70A808F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,12 +187,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				04373F11245CF59100583C58 /* LaunchScreen.storyboard in Resources */,
+				04373F23245D01F700583C58 /* GoogleService-Info.plist in Resources */,
 				04373F0E245CF59100583C58 /* Assets.xcassets in Resources */,
 				04373F0C245CF59000583C58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55583A60FFDF9342E70A808F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmashRecord/Pods-SmashRecord-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmashRecord/Pods-SmashRecord-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmashRecord/Pods-SmashRecord-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90D1042CB8CC6B04DCC7C4C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmashRecord-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04373EFB245CF59000583C58 /* Sources */ = {
@@ -318,6 +391,7 @@
 		};
 		04373F16245CF59100583C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB36A46B522D35AC105B54C /* Pods-SmashRecord.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +410,7 @@
 		};
 		04373F17245CF59100583C58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4DC6CE520A54C70BF7CAB49 /* Pods-SmashRecord.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

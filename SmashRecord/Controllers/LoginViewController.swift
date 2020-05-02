@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToRegister", sender: self)
     }
     
 }
