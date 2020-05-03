@@ -30,13 +30,13 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fightersArray.count
+        return Fighter.fightersArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        cell.fighterName.text = Fighter
-        cell.fighterView.image = UIImage(named: fightersArray[indexPath.row])
+        cell.fighterName.text = Fighter.fightersArray[indexPath.row][0]
+        cell.fighterView.image = UIImage(named: Fighter.fightersArray[indexPath.row][1])
         
         
         return cell
