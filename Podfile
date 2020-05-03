@@ -8,5 +8,6 @@ target 'SmashRecord' do
   # Pods for SmashRecord
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'RealmSwift'
 
 end
