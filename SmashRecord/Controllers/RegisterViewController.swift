@@ -16,9 +16,6 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        emailTextField.addBorderAll(color: .black)
-        passwordTextField.addBorderAll(color: .black)
         
     }
     
@@ -38,7 +35,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        
+        navigationController?.popViewController(animated: true)
     }
     
 }

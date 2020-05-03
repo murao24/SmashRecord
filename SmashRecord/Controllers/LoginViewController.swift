@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        emailTextField.addBorderAll(color: .black)
-        passwordTextField.addBorderAll(color: .black)
         emailTextField.text = "1@2.com"
         passwordTextField.text = "testuser1"
         

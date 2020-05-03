@@ -19,6 +19,7 @@ class NoteViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.dataSource = self
+        tableView.delegate = self
 //        tableView.reloadData()
     }
 
@@ -29,6 +30,8 @@ class NoteViewController: UIViewController {
 extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     
     
+    // MARK: - Tableview Datasource Methods
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Fighter.fightersArray.count
     }
@@ -38,8 +41,13 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
         cell.fighterName.text = Fighter.fightersArray[indexPath.row][0]
         cell.fighterView.image = UIImage(named: Fighter.fightersArray[indexPath.row][1])
         
-        
         return cell
+    }
+    
+    // MARK: - Tableview Delegate Methods
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToFighter", sender: self)
     }
 
 
