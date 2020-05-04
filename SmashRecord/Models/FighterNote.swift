@@ -11,9 +11,9 @@ import RealmSwift
 
 class FighterNote: Object {
     
-    @objc dynamic var name: String = ""
+    @objc dynamic var parentFighter: String = ""
     @objc dynamic var note: String = ""
     @objc dynamic var createdAt: Date?
-    let fighter = LinkingObjects(fromType: Fighter.self, property: "FighterNotes")
+    let fighter = LinkingObjects(fromType: Fighter.self, property: "fighterNotes")
     
 }

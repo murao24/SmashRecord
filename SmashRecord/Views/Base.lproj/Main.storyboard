@@ -63,7 +63,7 @@
                     <tabBarItem key="tabBarItem" title="Note" image="square.and.pencil" catalog="system" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="VRg-2o-UU3" id="3b5-lV-tqx"/>
-                        <segue destination="HKr-kY-vLP" kind="show" identifier="goToFighter" id="IKF-hH-NWy"/>
+                        <segue destination="CpB-jg-Poh" kind="show" identifier="goToFighter" id="hqi-Oy-jpq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -71,27 +71,39 @@
             <point key="canvasLocation" x="2439.130434782609" y="-485.49107142857139"/>
         </scene>
         <!--Fighter View Controller-->
-        <scene sceneID="Phi-KC-gzt">
+        <scene sceneID="ejo-rQ-SbN">
             <objects>
-                <viewController id="HKr-kY-vLP" customClass="FighterViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5pC-xC-Rka">
+                <tableViewController id="CpB-jg-Poh" customClass="FighterViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eQ7-4H-aJo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="WHT-v7-2ni"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jrB-i6-Zo5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oRP-AP-reZ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="HGF-cE-neY">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HGF-cE-neY" id="Bod-cF-9gB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CpB-jg-Poh" id="qz9-Yq-8PT"/>
+                            <outlet property="delegate" destination="CpB-jg-Poh" id="Hjt-xp-iGy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9GD-PN-mVh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lvC-d3-bTh">
                             <connections>
-                                <action selector="addPressed:" destination="HKr-kY-vLP" id="srN-JQ-mwC"/>
+                                <action selector="addPressed:" destination="CpB-jg-Poh" id="Oo2-wt-p3t"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aLq-FR-v8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cn3-vv-yCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3391" y="-488"/>
+            <point key="canvasLocation" x="4259" y="-487"/>
         </scene>
         <!--Record-->
         <scene sceneID="wg7-f3-ORb">

@@ -13,7 +13,7 @@ class Fighter: Object {
     
     @objc dynamic var fighterName: String = ""
     @objc dynamic var fighterID: Int = 0
-    let FighterNotes = List<FighterNote>()
+    let fighterNotes = List<FighterNote>()
 
     override static func primaryKey() -> String? {
       return "fighterID"
