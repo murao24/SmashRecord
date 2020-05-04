@@ -32,10 +32,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3b-gr-UCn">
-                                                    <rect key="frame" x="40" y="11" width="200" height="27"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="P2m-w9-eT7"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="40" y="11" width="204" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -46,6 +43,7 @@
                                                 <constraint firstItem="Q3b-gr-UCn" firstAttribute="top" secondItem="I3U-re-MbY" secondAttribute="topMargin" id="GqZ-tG-bkX"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Q3b-gr-UCn" secondAttribute="bottom" id="PFr-9w-DTe"/>
                                                 <constraint firstItem="Q3b-gr-UCn" firstAttribute="leading" secondItem="I3U-re-MbY" secondAttribute="leadingMargin" constant="20" id="Zlx-hJ-dum"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="Q3b-gr-UCn" secondAttribute="trailing" constant="150" id="bEt-S1-tfS"/>
                                                 <constraint firstAttribute="bottom" secondItem="5kP-RL-J6W" secondAttribute="bottom" id="s3y-TP-5c7"/>
                                                 <constraint firstItem="5kP-RL-J6W" firstAttribute="leading" secondItem="I3U-re-MbY" secondAttribute="leading" id="tDg-LJ-564"/>
                                                 <constraint firstAttribute="trailing" secondItem="5kP-RL-J6W" secondAttribute="trailing" id="zoc-dh-5nh"/>
@@ -72,17 +70,24 @@
             </objects>
             <point key="canvasLocation" x="2439.130434782609" y="-485.49107142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Fighter View Controller-->
         <scene sceneID="Phi-KC-gzt">
             <objects>
-                <viewController id="HKr-kY-vLP" sceneMemberID="viewController">
+                <viewController id="HKr-kY-vLP" customClass="FighterViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5pC-xC-Rka">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WHT-v7-2ni"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jrB-i6-Zo5"/>
+                    <navigationItem key="navigationItem" id="jrB-i6-Zo5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oRP-AP-reZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addPressed:" destination="HKr-kY-vLP" id="srN-JQ-mwC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLq-FR-v8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

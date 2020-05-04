@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FighterViewController: UIViewController {
+    
+    let realm = try! Realm()
+    
+    var fighterNotes: Results<FighterNote>?
+    
+    var selectedFighter: Fighter?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = selectedFighter?.fighterName
+        
     }
     
-
+    @IBAction func addPressed(_ sender: UIBarButtonItem) {
+        
+    }
+    
 
 
 }
