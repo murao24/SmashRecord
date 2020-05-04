@@ -20,8 +20,13 @@ class FighterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = selectedFighter?.fighterName
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print(selectedFighter?.fighterName)
     }
     
     @IBAction func addPressed(_ sender: UIBarButtonItem) {

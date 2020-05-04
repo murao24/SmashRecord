@@ -13,14 +13,10 @@ class NoteViewController: UIViewController {
     
     let realm = try! Realm()
     
-    var fighters: Results<Fighter>?
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        saveFighter()
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
@@ -57,6 +53,14 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - Tableview Delegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let newFighter = Fighter()
+        newFighter.fighterName = S.fightersArray[indexPath.row][0]
+        newFighter.fighterID = indexPath.row
+
+        saveFighter(fighter: newFighter)
+        
+
         performSegue(withIdentifier: "goToFighter", sender: self)
     }
     
@@ -73,17 +77,12 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Data Manipulation Methods
     
-//    private func saveFighter() {
-//
-//        for i in 0...S.fightersArray.count - 1 {
-//            let newFighter = Fighter()
-//            newFighter.fighterName = S.fightersArray[i][0]
-//            try! realm.write {
-//                realm.add(newFighter)
-//            }
-//        }
-//
-//    }
-    
+    private func saveFighter(fighter: Fighter) {
+        do {
+            try! realm.write {
+                realm.add(fighter, update: .modified)
+            }
+        }
+    }
     
 }
