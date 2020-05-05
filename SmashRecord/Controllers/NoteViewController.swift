@@ -21,7 +21,6 @@ class NoteViewController: UIViewController {
         super.viewDidLoad()
         
         saveFighter()
-        fighters = realm.objects(Fighter.self)
         tableView.reloadData()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
@@ -61,34 +60,41 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         let destinationVC = segue.destination as! FighterViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedFighter = fighters?[indexPath.row]
         }
-
+        
     }
     
     
     //MARK: - Data Manipulation Methods
     
     private func saveFighter() {
-
+        
+        fighters = realm.objects(Fighter.self)
+        
+        guard fighters?.first?.fighterName == nil else {
+            return
+        }
+        
         for i in 0...S.fightersArray.count - 1 {
             let newFighter = Fighter()
             newFighter.fighterName = S.fightersArray[i][0]
             newFighter.fighterID = i
-            
             do {
                 try realm.write {
-                    realm.add(newFighter, update: .modified)
+                    realm.add(newFighter)
                 }
             } catch {
                 print("Error saving fighters\(error)")
             }
         }
-
+        
+        
+        
     }
     
 }
