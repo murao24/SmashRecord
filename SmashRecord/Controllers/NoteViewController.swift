@@ -29,14 +29,12 @@ class NoteViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.dataSource = self
         tableView.delegate = self
-        
     }
     
 }
 
 
 extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
-    
     
     // MARK: - Tableview Datasource Methods
     
