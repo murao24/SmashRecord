@@ -37,7 +37,7 @@ class FighterViewController: UITableViewController {
         
         var textView = UITextField()
         
-        let alert = UIAlertController(title: "メモを追加", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "メモを追加\n\n\n\n\n", message: "", preferredStyle: .alert)
         
         let cancel = UIAlertAction(title: "cancel", style: .destructive, handler: nil)
         
@@ -59,9 +59,7 @@ class FighterViewController: UITableViewController {
             self.tableView.reloadData()
         }
         
-        alert.addTextField { (alertTextFIeld) in
-            textView = alertTextFIeld
-        }
+        // textView
 
         alert.addAction(cancel)
         alert.addAction(action)
