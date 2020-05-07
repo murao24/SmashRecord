@@ -25,6 +25,7 @@
 		046BBDFE245F972800B8A8E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDFD245F972800B8A8E9 /* Constants.swift */; };
 		046BBE002463819600B8A8E9 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDFF2463819600B8A8E9 /* Record.swift */; };
 		046BBE02246384AF00B8A8E9 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBE01246384AF00B8A8E9 /* ContainerViewController.swift */; };
+		046BBE062463989E00B8A8E9 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBE052463989E00B8A8E9 /* RecordTableViewCell.swift */; };
 		04CD59CA245D364A00976595 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD59C9245D364A00976595 /* AlertController.swift */; };
 		04CD59D0245D513700976595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CD59CF245D513700976595 /* GoogleService-Info.plist */; };
 		22E7861BF4581CA2468228A6 /* Pods_SmashRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */; };
@@ -51,6 +52,7 @@
 		046BBDFD245F972800B8A8E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		046BBDFF2463819600B8A8E9 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		046BBE01246384AF00B8A8E9 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = SmashRecord/Views/ContainerViewController.swift; sourceTree = SOURCE_ROOT; };
+		046BBE052463989E00B8A8E9 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		04CD59C9245D364A00976595 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		04CD59CF245D513700976595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 			children = (
 				04373F0A245CF59000583C58 /* Main.storyboard */,
 				046BBDEE245D5F1D00B8A8E9 /* CustomTableViewCell.swift */,
+				046BBE052463989E00B8A8E9 /* RecordTableViewCell.swift */,
 				04373F20245CFF2500583C58 /* UIView+AddBorder.swift */,
 			);
 			path = Views;
@@ -276,6 +279,7 @@
 				04373F09245CF59000583C58 /* RecordViewController.swift in Sources */,
 				046BBDF6245E51E100B8A8E9 /* Fighter.swift in Sources */,
 				046BBE002463819600B8A8E9 /* Record.swift in Sources */,
+				046BBE062463989E00B8A8E9 /* RecordTableViewCell.swift in Sources */,
 				046BBDF8245E8E8E00B8A8E9 /* FighterViewController.swift in Sources */,
 				04CD59CA245D364A00976595 /* AlertController.swift in Sources */,
 				04373F07245CF59000583C58 /* NoteViewController.swift in Sources */,

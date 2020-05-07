@@ -12,6 +12,8 @@ class ContainerViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     
+    private var recordVC: RecordViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeButton()
@@ -26,6 +28,13 @@ class ContainerViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tableVC = segue.destination as? RecordViewController {
+            self.recordVC = tableVC
+        }
     }
     
 }
