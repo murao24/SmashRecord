@@ -117,15 +117,64 @@
             <point key="canvasLocation" x="3699" y="-485"/>
         </scene>
         <!--Record-->
+        <scene sceneID="DJY-hW-eUH">
+            <objects>
+                <viewController id="D5a-xV-v3e" customClass="ContainerViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3HK-ca-eLu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4f3-Ry-m9Y">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <connections>
+                                    <segue destination="8rJ-Kc-sve" kind="embed" identifier="goToRecord" id="qif-u8-fbg"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wz-LE-QGX">
+                                <rect key="frame" x="344" y="743" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cR2-jp-wHZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="fyT-fN-h31"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="D5a-xV-v3e" eventType="touchUpInside" id="ggu-QU-7ty"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4f3-Ry-m9Y" firstAttribute="leading" secondItem="XK5-Ba-55w" secondAttribute="leading" id="3nQ-A2-JRa"/>
+                            <constraint firstItem="XK5-Ba-55w" firstAttribute="trailing" secondItem="0wz-LE-QGX" secondAttribute="trailing" constant="10" id="NeY-78-v7r"/>
+                            <constraint firstItem="4f3-Ry-m9Y" firstAttribute="trailing" secondItem="XK5-Ba-55w" secondAttribute="trailing" id="d7H-1d-Jvh"/>
+                            <constraint firstItem="4f3-Ry-m9Y" firstAttribute="top" secondItem="XK5-Ba-55w" secondAttribute="top" id="hhz-90-5h9"/>
+                            <constraint firstItem="4f3-Ry-m9Y" firstAttribute="bottom" secondItem="XK5-Ba-55w" secondAttribute="bottom" id="kRN-99-Ppj"/>
+                            <constraint firstItem="4f3-Ry-m9Y" firstAttribute="bottom" secondItem="0wz-LE-QGX" secondAttribute="bottom" constant="10" id="sZt-jQ-zTZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XK5-Ba-55w"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Record" image="battle-icon" id="GqV-Xa-6Wc"/>
+                    <connections>
+                        <outlet property="addButton" destination="0wz-LE-QGX" id="2ZR-Sm-oqk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4XO-Pc-HP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715.9420289855075" y="287.94642857142856"/>
+        </scene>
+        <!--Record-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="RecordViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-Wo-EQd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="681"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -151,10 +200,13 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Record" image="battle-icon" selectedImage="battle-icon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Kw-Wo-EQd" id="knY-bD-YkU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2715.9420289855075" y="286.60714285714283"/>
+            <point key="canvasLocation" x="3699" y="288"/>
         </scene>
         <!--Account-->
         <scene sceneID="1bW-P1-vKR">
@@ -329,7 +381,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="D5a-xV-v3e" kind="relationship" relationship="viewControllers" id="tOa-1I-x0M"/>
                         <segue destination="XAw-Qj-cXS" kind="relationship" relationship="viewControllers" id="peF-GG-IQp"/>
                     </connections>
                 </tabBarController>

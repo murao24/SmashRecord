@@ -23,6 +23,8 @@
 		046BBDF8245E8E8E00B8A8E9 /* FighterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDF7245E8E8E00B8A8E9 /* FighterViewController.swift */; };
 		046BBDFA245E9B5500B8A8E9 /* FighterNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDF9245E9B5500B8A8E9 /* FighterNote.swift */; };
 		046BBDFE245F972800B8A8E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDFD245F972800B8A8E9 /* Constants.swift */; };
+		046BBE002463819600B8A8E9 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDFF2463819600B8A8E9 /* Record.swift */; };
+		046BBE02246384AF00B8A8E9 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBE01246384AF00B8A8E9 /* ContainerViewController.swift */; };
 		04CD59CA245D364A00976595 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD59C9245D364A00976595 /* AlertController.swift */; };
 		04CD59D0245D513700976595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CD59CF245D513700976595 /* GoogleService-Info.plist */; };
 		22E7861BF4581CA2468228A6 /* Pods_SmashRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */; };
@@ -47,6 +49,8 @@
 		046BBDF7245E8E8E00B8A8E9 /* FighterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FighterViewController.swift; path = SmashRecord/Views/FighterViewController.swift; sourceTree = SOURCE_ROOT; };
 		046BBDF9245E9B5500B8A8E9 /* FighterNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterNote.swift; sourceTree = "<group>"; };
 		046BBDFD245F972800B8A8E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		046BBDFF2463819600B8A8E9 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		046BBE01246384AF00B8A8E9 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = SmashRecord/Views/ContainerViewController.swift; sourceTree = SOURCE_ROOT; };
 		04CD59C9245D364A00976595 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		04CD59CF245D513700976595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +111,7 @@
 				04373F1C245CFE8100583C58 /* RegisterViewController.swift */,
 				04373F06245CF59000583C58 /* NoteViewController.swift */,
 				046BBDF7245E8E8E00B8A8E9 /* FighterViewController.swift */,
+				046BBE01246384AF00B8A8E9 /* ContainerViewController.swift */,
 				04373F08245CF59000583C58 /* RecordViewController.swift */,
 				04373F1E245CFE9200583C58 /* AccountViewController.swift */,
 				04CD59C9245D364A00976595 /* AlertController.swift */,
@@ -130,6 +135,7 @@
 				046BBDFD245F972800B8A8E9 /* Constants.swift */,
 				046BBDF5245E51E100B8A8E9 /* Fighter.swift */,
 				046BBDF9245E9B5500B8A8E9 /* FighterNote.swift */,
+				046BBDFF2463819600B8A8E9 /* Record.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			files = (
 				04373F09245CF59000583C58 /* RecordViewController.swift in Sources */,
 				046BBDF6245E51E100B8A8E9 /* Fighter.swift in Sources */,
+				046BBE002463819600B8A8E9 /* Record.swift in Sources */,
 				046BBDF8245E8E8E00B8A8E9 /* FighterViewController.swift in Sources */,
 				04CD59CA245D364A00976595 /* AlertController.swift in Sources */,
 				04373F07245CF59000583C58 /* NoteViewController.swift in Sources */,
@@ -276,6 +283,7 @@
 				04373F03245CF59000583C58 /* AppDelegate.swift in Sources */,
 				04373F21245CFF2500583C58 /* UIView+AddBorder.swift in Sources */,
 				046BBDEF245D5F1D00B8A8E9 /* CustomTableViewCell.swift in Sources */,
+				046BBE02246384AF00B8A8E9 /* ContainerViewController.swift in Sources */,
 				04373F1D245CFE8100583C58 /* RegisterViewController.swift in Sources */,
 				04373F1B245CFE7600583C58 /* LoginViewController.swift in Sources */,
 				046BBDFE245F972800B8A8E9 /* Constants.swift in Sources */,
