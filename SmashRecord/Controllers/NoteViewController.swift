@@ -59,7 +59,7 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destinationVC = segue.destination as! FighterViewController
+        let destinationVC = segue.destination as! FighterNoteViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedFighter = fighters?[indexPath.row]

@@ -12,6 +12,7 @@ import RealmSwift
 class RecordViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var stageLabel: UILabel!
     
     var records: Results<Record>?
     
@@ -19,6 +20,7 @@ class RecordViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        stageLabel.adjustsFontSizeToFitWidth = true
     }
 
 }
@@ -34,12 +36,21 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecordTableViewCell
-        cell.resultLabel.text = "◯"
-        cell.myFighterView.image = UIImage(named: S.fightersArray[10][1])
-        cell.opponentFighterView.image = UIImage(named: S.fightersArray[29][1])
-        cell.stageLabel.text = "ポケスタ2"
+
+        if let record = records?[indexPath.row] {
+//            cell.resultLabel.text = record.result
+            cell.myFighterView.image = UIImage(named: record.myFighter)
+            cell.opponentFighterView.image = UIImage(named: record.opponentFighter)
+            cell.stageLabel.text = record.stage
+        }
         
         return cell
+    }
+    
+    func addButtonPressed(message: String) {
+        
+
+
     }
     
 }

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class FighterViewController: UITableViewController, UITextViewDelegate {
+class FighterNoteViewController: UITableViewController, UITextViewDelegate {
     
     let realm = try! Realm()
     
