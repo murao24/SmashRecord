@@ -20,7 +20,7 @@ class FighterImageViewController: UIViewController {
         for fighterView in fighterViews {
             fighterView.setImage(UIImage(named: S.fightersArray[count][1]), for: .normal)
             fighterView.contentMode = .scaleAspectFit
-            fighterView.imageEdgeInsets = UIEdgeInsets(top: 0, left: -45, bottom: 0, right: 0)
+            fighterView.imageEdgeInsets = UIEdgeInsets(top: 2, left: -45, bottom: 2, right: 2)
             count += 1
         }
     }
