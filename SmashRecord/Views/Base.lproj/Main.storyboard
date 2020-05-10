@@ -328,22 +328,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcX-gf-mfW">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="gTK-El-dzc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4Z-Ed-rt3">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Qkd-a0-gb0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWC-aq-sjc">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="m6m-fx-QuX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siR-lo-7cS">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Xtl-9s-UH1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWS-27-7Yt">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="63m-va-EAe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -353,22 +368,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwQ-Gy-W5M">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="BqI-wu-YGv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r7-jg-T56">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="wgw-II-uHJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1o-zd-gea">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Yhv-0a-nnI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-Qz-XNh">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="n3p-fp-5a2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zf-iG-8ui">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="KI9-We-M7k"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -378,22 +408,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v08-tm-hNi">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="e8B-KK-dzj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssk-jS-v2y">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="sNY-yN-KJk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJh-Ev-aKq">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="M0F-hd-6qA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-88-Tgm">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="a8t-Ej-KuN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuz-Hw-MA8">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="eOg-3i-efC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -403,22 +448,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDT-X7-jJT">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="6fb-ii-2lQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCO-hf-mc0">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="f2f-gQ-GFZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xc-C2-Rnj">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="aO6-EP-Qdq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-h1-yeK">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="gsr-1W-54Q"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxY-iR-3km">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="c7D-GH-Tfv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -428,22 +488,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obs-zJ-Yyj">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Yze-eG-TXj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdd-2m-YNY">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="u0e-qV-hFI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngD-nt-jqE">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="9rF-rt-zcH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prr-iE-oks">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="faM-Zy-ImZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jq-gI-th4">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="zfS-X2-z5y"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -453,22 +528,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hns-bZ-V1q">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="mER-GR-c6M"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW4-Ck-9iG">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Bga-L3-wjP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNG-JE-SUu">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="W8k-Wm-vZv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-6i-vsq">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="9Rp-vC-0vc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNP-kd-Xts">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="dvN-gB-Lcm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -478,22 +568,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3x-IR-4JG">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="xOK-Gh-evR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fji-U8-dZw">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="rb1-PB-v0c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69c-6l-gjN">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="hoq-YJ-lmO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kao-aZ-fxh">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Dfd-vK-Unr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HR-zB-7Fj">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="qve-Qq-UBN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -503,22 +608,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-HT-VXq">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="pXC-oh-0Wi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WN9-pM-dsO">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="5HB-ij-W4A"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu7-fc-JNX">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="gqS-4n-hnC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3p7-qj-WiJ">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="n3I-L7-ON7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r7-bJ-Vyx">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="CTk-W7-Wzb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -528,22 +648,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDe-z1-KZa">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Ghk-a2-jUE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CD-di-lWR">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="jXY-QS-zxN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PS2-r6-qYd">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="4At-Lb-T2L"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH1-m5-nOw">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="wUf-T5-UBO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOh-NM-vFL">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="evo-qa-3Uf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -553,22 +688,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpa-V4-xXh">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Jlr-Lm-P9H"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6R-gu-Gp2">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="lZ8-Nz-nrg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EO-mh-Sg7">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="f3p-AJ-lit"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtg-Pm-tlY">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="ZXc-8i-JtL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXb-Ae-rLH">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="N0J-PR-6de"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -578,22 +728,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0M-tc-Upe">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="9c9-UM-pci"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1i-hf-KPK">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="T9W-6u-zwX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZd-Si-Uki">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="GoD-a1-7ET"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4z-2v-QcG">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="RAR-NF-j6l"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-5x-5iX">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="xyc-js-7Ta"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -603,22 +768,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzX-aC-rSD">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="yq7-5w-n58"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzp-um-66a">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="clD-gX-7sp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cot-py-khC">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="89t-nm-0nR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE1-fU-egk">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Kvl-pY-HBs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dah-Pf-WQ7">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="FQj-Sm-6w5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -628,22 +808,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3n-nb-4ed">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="cIx-Lt-pbR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ie-GN-e9E">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Zg3-em-sMY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4M-qG-xym">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="c7S-LQ-dNS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXN-Lv-SQV">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="rXb-l9-aEb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="056-Gj-M5Q">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="x74-iB-FI3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -653,22 +848,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vG-k0-HWJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="3u6-3P-5BP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmX-Pa-5sJ">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="LAJ-LT-cjK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Av3-Ru-3La">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="YNj-YW-bpD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adj-6Z-gTu">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="jY4-8U-W4L"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsp-IV-SRe">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="39"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="nqJ-CB-sVR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -678,22 +888,37 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rus-wQ-bvp">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="Ff1-Sn-vTO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdE-nd-BBK">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="PYh-si-aan"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sO-Jb-DGd">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="26n-3W-3ut"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1e-jP-0Tj">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="xW1-IL-TVl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBt-5N-cVc">
                                                 <rect key="frame" x="336" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="30n-mg-68Z"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -703,14 +928,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkR-0j-KZn">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="r1U-3s-cuh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKO-zZ-Mro">
                                                 <rect key="frame" x="84" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="mSv-Ir-Pcq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzw-Mq-Tv9">
                                                 <rect key="frame" x="168" y="0.0" width="58" height="38.5"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fighterPressed:" destination="F42-Bc-ooW" eventType="touchUpInside" id="ExP-jN-CBT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNe-w8-khb">
                                                 <rect key="frame" x="252" y="0.0" width="58" height="38.5"/>

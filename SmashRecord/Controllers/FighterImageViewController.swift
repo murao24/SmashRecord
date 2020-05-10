@@ -12,18 +12,26 @@ class FighterImageViewController: UIViewController {
     
 
     @IBOutlet var fighterViews: [UIButton]!
-    var count = 0
+    private var count = 0
+    var myFighterName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Show fighterImage
         for fighterView in fighterViews {
             fighterView.setImage(UIImage(named: S.fightersArray[count][1]), for: .normal)
             fighterView.contentMode = .scaleAspectFit
             fighterView.imageEdgeInsets = UIEdgeInsets(top: 2, left: -45, bottom: 2, right: 2)
             count += 1
         }
+        
     }
     
-
+    @IBAction func fighterPressed(_ sender: UIButton) {
+        
+        print(sender.currentImage)
+        
+    }
+    
 }
