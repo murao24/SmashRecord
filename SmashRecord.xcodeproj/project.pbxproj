@@ -18,8 +18,6 @@
 		04373F1D245CFE8100583C58 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1C245CFE8100583C58 /* RegisterViewController.swift */; };
 		04373F1F245CFE9200583C58 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1E245CFE9200583C58 /* AccountViewController.swift */; };
 		04373F21245CFF2500583C58 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F20245CFF2500583C58 /* UIView+AddBorder.swift */; };
-		044CE3C624662A6300A22BE9 /* FighterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044CE3C524662A6300A22BE9 /* FighterView.swift */; };
-		044CE3C824662A7400A22BE9 /* FighterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044CE3C724662A7400A22BE9 /* FighterView.xib */; };
 		046BBDEF245D5F1D00B8A8E9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDEE245D5F1D00B8A8E9 /* CustomTableViewCell.swift */; };
 		046BBDF6245E51E100B8A8E9 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDF5245E51E100B8A8E9 /* Fighter.swift */; };
 		046BBDF8245E8E8E00B8A8E9 /* FighterNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDF7245E8E8E00B8A8E9 /* FighterNoteViewController.swift */; };
@@ -49,8 +47,6 @@
 		04373F1C245CFE8100583C58 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		04373F1E245CFE9200583C58 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		04373F20245CFF2500583C58 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddBorder.swift"; sourceTree = "<group>"; };
-		044CE3C524662A6300A22BE9 /* FighterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterView.swift; sourceTree = SOURCE_ROOT; };
-		044CE3C724662A7400A22BE9 /* FighterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FighterView.xib; sourceTree = "<group>"; };
 		046BBDEE245D5F1D00B8A8E9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		046BBDF5245E51E100B8A8E9 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fighter.swift; path = SmashRecord/Fighter.swift; sourceTree = SOURCE_ROOT; };
 		046BBDF7245E8E8E00B8A8E9 /* FighterNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FighterNoteViewController.swift; path = SmashRecord/Views/FighterNoteViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -138,8 +134,6 @@
 				046BBDEE245D5F1D00B8A8E9 /* CustomTableViewCell.swift */,
 				046BBE052463989E00B8A8E9 /* RecordTableViewCell.swift */,
 				04373F20245CFF2500583C58 /* UIView+AddBorder.swift */,
-				044CE3C524662A6300A22BE9 /* FighterView.swift */,
-				044CE3C724662A7400A22BE9 /* FighterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,7 +229,6 @@
 				04373F11245CF59100583C58 /* LaunchScreen.storyboard in Resources */,
 				04CD59D0245D513700976595 /* GoogleService-Info.plist in Resources */,
 				04373F0E245CF59100583C58 /* Assets.xcassets in Resources */,
-				044CE3C824662A7400A22BE9 /* FighterView.xib in Resources */,
 				04373F0C245CF59000583C58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +298,6 @@
 				048CCE9F2463F54C00B4C400 /* FighterImageViewController.swift in Sources */,
 				04373F1D245CFE8100583C58 /* RegisterViewController.swift in Sources */,
 				04373F1B245CFE7600583C58 /* LoginViewController.swift in Sources */,
-				044CE3C624662A6300A22BE9 /* FighterView.swift in Sources */,
 				046BBDFE245F972800B8A8E9 /* Constants.swift in Sources */,
 				04373F05245CF59000583C58 /* SceneDelegate.swift in Sources */,
 				046BBDFA245E9B5500B8A8E9 /* FighterNote.swift in Sources */,

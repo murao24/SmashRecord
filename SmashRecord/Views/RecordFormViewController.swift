@@ -23,7 +23,7 @@ class RecordFormViewController: UIViewController {
         super.viewDidLoad()
         
         myFighterView.setImage(buttonImage, for: .normal)
-        opponentFighterView.setImage(buttonImage, for: .normal)
+        
     }
     
     @IBAction func myFighterPressed(_ sender: UIButton) {
