@@ -47,10 +47,5 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func addButtonPressed(message: String) {
-        
-
-
-    }
     
 }

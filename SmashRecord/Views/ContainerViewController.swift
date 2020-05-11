@@ -27,10 +27,7 @@ class ContainerViewController: UIViewController {
         addButton.layer.shadowOpacity = 0.5
     }
     
-    @IBAction func addButtonPressed(_ sender: UIButton) {
-        
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tableVC = segue.destination as? RecordViewController {
             self.recordVC = tableVC

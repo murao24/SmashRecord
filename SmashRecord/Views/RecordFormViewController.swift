@@ -14,20 +14,33 @@ class RecordFormViewController: UIViewController {
     @IBOutlet weak var opponentFighterView: UIButton!
     @IBOutlet weak var stageView: UIButton!
     @IBOutlet weak var winButton: UIButton!
-    @IBOutlet weak var drawButton: UIButton!
     @IBOutlet weak var loseButton: UIButton!
     
-    let buttonImage = UIImage(named: "mario")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myFighterView.setImage(buttonImage, for: .normal)
+        myFighterView.setImage(UIImage(named: "wario"), for: .normal)
+        opponentFighterView.setImage(UIImage(named: "mario"), for: .normal)
+        stageView.setImage(UIImage(named: "syuutenn"), for: .normal)
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToSelectMyFighter" {
+            let destinationVC = segue.destination as! FighterImageViewController
+            destinationVC.switchSettingFighterImage = "myFighter"
+        } else if segue.identifier == "goToSelectOpponentFighter" {
+            let destinationVC = segue.destination as! FighterImageViewController
+            destinationVC.switchSettingFighterImage = "opponentFighter"
+        }
+
+    }
+
+    
     @IBAction func myFighterPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToSelectFighter", sender: self)
+        performSegue(withIdentifier: "goToSelectMyFighter", sender: self)
     }
     
     @IBAction func opponentFighterPressed(_ sender: UIButton) {
@@ -35,6 +48,11 @@ class RecordFormViewController: UIViewController {
     }
     
     @IBAction func stagePressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToSelectStage", sender: self)
     }
+    
+    @IBAction func savePressed(_ sender: UIButton) {
+    }
+    
     
 }

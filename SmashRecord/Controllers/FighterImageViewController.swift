@@ -13,7 +13,8 @@ class FighterImageViewController: UIViewController {
 
     @IBOutlet var fighterViews: [UIButton]!
     private var count = 0
-    var myFighterName: String?
+    var fighterName: String = ""
+    var switchSettingFighterImage = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,27 @@ class FighterImageViewController: UIViewController {
             count += 1
         }
         
+        
     }
     
     @IBAction func fighterPressed(_ sender: UIButton) {
+
+        let num = sender.tag
+        fighterName = S.fightersArray[num][1]
+
         
-        print(sender.currentImage)
+        switch switchSettingFighterImage {
+        case "myFighter":
+            let preVC = self.presentingViewController as! RecordFormViewController
+            preVC.myFighterView.setImage(UIImage(named: fighterName), for: .normal)
+            dismiss(animated: true, completion: nil)
+        case "opponentFighter":
+            let preVC = self.presentingViewController as! RecordFormViewController
+            preVC.opponentFighterView.setImage(UIImage(named: fighterName), for: .normal)
+            dismiss(animated: true, completion: nil)
+        default:
+            print("Error saving fighter image.")
+        }
         
     }
     
