@@ -1074,91 +1074,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="aEV-r7-uc8">
-                                <rect key="frame" x="52" y="268" width="310" height="340"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="3y6-b6-0V7">
-                                        <rect key="frame" x="0.0" y="0.0" width="221" height="34"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDd-Vt-qkk">
-                                                <rect key="frame" x="0.0" y="0.0" width="35" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkg-eA-ZCz">
-                                                <rect key="frame" x="167" y="0.0" width="54" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="myFighterPressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="COO-xf-x7m"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="4TE-J3-530">
-                                        <rect key="frame" x="0.0" y="102" width="221" height="34"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFB-cH-vZG">
-                                                <rect key="frame" x="0.0" y="0.0" width="35" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c6-2k-cLz">
-                                                <rect key="frame" x="167" y="0.0" width="54" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="opponentFighterPressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="0iJ-qt-HJE"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="97" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-Gn-dBI">
-                                        <rect key="frame" x="0.0" y="204" width="220.5" height="34"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ステージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTO-Ls-om6">
-                                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnX-hY-6ju">
-                                                <rect key="frame" x="166.5" y="0.0" width="54" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="stagePressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="jHa-Ea-kMq"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-tg-7ej">
-                                        <rect key="frame" x="0.0" y="306" width="274" height="34"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝敗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfw-7Z-wpC">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="y49-Pp-NU7">
-                                                <rect key="frame" x="188" y="0.0" width="86" height="34"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfw-9g-C5Q">
-                                                        <rect key="frame" x="0.0" y="0.0" width="31" height="34"/>
-                                                        <state key="normal" title="勝ち"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZQ-1Y-e0I">
-                                                        <rect key="frame" x="55" y="0.0" width="31" height="34"/>
-                                                        <state key="normal" title="負け"/>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦を記録！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8Z-XD-DUf">
-                                <rect key="frame" x="40" y="80" width="334" height="98"/>
+                                <rect key="frame" x="40" y="80" width="334" height="146"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1177,28 +1094,113 @@
                                     <action selector="savePressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="Hce-uW-2Gz"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="C3B-ed-ZDk">
+                                <rect key="frame" x="40" y="306" width="334" height="252"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="QS5-LE-VMx">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCl-2b-PgS">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5O-jD-HLe">
+                                                <rect key="frame" x="180" y="0.0" width="54" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="myFighterPressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="XMu-47-DSm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="21Q-Lv-aav">
+                                        <rect key="frame" x="0.0" y="72" width="234" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-LV-LJ4">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-r4-EML">
+                                                <rect key="frame" x="180" y="0.0" width="54" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="opponentFighterPressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="set-xV-gTs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="tdx-8S-TJ7">
+                                        <rect key="frame" x="0.0" y="144" width="280.5" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ステージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UO-ht-y2i">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d2-uz-CWJ">
+                                                <rect key="frame" x="226.5" y="0.0" width="54" height="36"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="uch-w9-YBh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="Pvg-nA-thr">
+                                        <rect key="frame" x="0.0" y="216" width="300" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勝敗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kp-Ej-EYN">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="T0L-99-CNI">
+                                                <rect key="frame" x="167" y="0.0" width="133" height="36"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLB-1l-I6y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="勝ち"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-0w-EoQ">
+                                                        <rect key="frame" x="92" y="0.0" width="41" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="負け"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N8Z-XD-DUf" firstAttribute="top" secondItem="jGC-OF-2Bx" secondAttribute="top" constant="80" id="2hC-8U-2Kd"/>
-                            <constraint firstItem="aEV-r7-uc8" firstAttribute="top" secondItem="N8Z-XD-DUf" secondAttribute="bottom" constant="90" id="RFd-Vy-ahX"/>
+                            <constraint firstItem="C3B-ed-ZDk" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="Co7-T2-dVV"/>
                             <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="N8Z-XD-DUf" secondAttribute="trailing" constant="40" id="UUm-2g-yTR"/>
-                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="bottom" secondItem="aEV-r7-uc8" secondAttribute="bottom" constant="200" id="YI4-9H-4kd"/>
                             <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="kmj-WD-lcm" secondAttribute="trailing" constant="40" id="aDO-R0-fqH"/>
                             <constraint firstItem="N8Z-XD-DUf" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="bNy-eA-MRB"/>
-                            <constraint firstItem="aEV-r7-uc8" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="52" id="cSq-gY-OVr"/>
                             <constraint firstItem="jGC-OF-2Bx" firstAttribute="bottom" secondItem="kmj-WD-lcm" secondAttribute="bottom" constant="50" id="caF-bf-Mtz"/>
-                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="aEV-r7-uc8" secondAttribute="trailing" constant="52" id="fnQ-L6-3pm"/>
+                            <constraint firstItem="kmj-WD-lcm" firstAttribute="top" secondItem="C3B-ed-ZDk" secondAttribute="bottom" constant="150" id="epw-iH-vgG"/>
                             <constraint firstItem="kmj-WD-lcm" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="rgF-7g-pFz"/>
+                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="C3B-ed-ZDk" secondAttribute="trailing" constant="40" id="yzg-4k-cs9"/>
+                            <constraint firstItem="C3B-ed-ZDk" firstAttribute="top" secondItem="N8Z-XD-DUf" secondAttribute="bottom" constant="80" id="zvy-P4-GsS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jGC-OF-2Bx"/>
                     </view>
                     <connections>
-                        <outlet property="loseButton" destination="VZQ-1Y-e0I" id="uDN-Rt-WeG"/>
-                        <outlet property="myFighterView" destination="Jkg-eA-ZCz" id="OSh-KB-Xk6"/>
-                        <outlet property="opponentFighterView" destination="7c6-2k-cLz" id="m1L-p0-YSH"/>
-                        <outlet property="stageView" destination="GnX-hY-6ju" id="Qbv-2W-Mfu"/>
-                        <outlet property="winButton" destination="zfw-9g-C5Q" id="TSN-9l-zPl"/>
+                        <outlet property="loseButton" destination="7nA-0w-EoQ" id="pwA-Uo-M8c"/>
+                        <outlet property="myFighterView" destination="M5O-jD-HLe" id="srm-BQ-h6w"/>
+                        <outlet property="opponentFighterView" destination="uDs-r4-EML" id="wRC-d8-dZd"/>
+                        <outlet property="stageView" destination="9d2-uz-CWJ" id="jiZ-cI-esG"/>
+                        <outlet property="winButton" destination="zLB-1l-I6y" id="lvX-M6-s1m"/>
                         <segue destination="IWw-tz-OUj" kind="showDetail" identifier="goToSelectStage" id="AQ6-8y-hP3"/>
                         <segue destination="F42-Bc-ooW" kind="showDetail" identifier="goToSelectMyFighter" id="qVB-5a-Vlr"/>
                         <segue destination="F42-Bc-ooW" kind="showDetail" identifier="goToSelectOpponentFighter" id="nMZ-nv-FUV"/>
@@ -1208,95 +1210,98 @@
             </objects>
             <point key="canvasLocation" x="3692.753623188406" y="797.54464285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Stage View Controller-->
         <scene sceneID="5rx-yt-yQV">
             <objects>
-                <viewController id="IWw-tz-OUj" sceneMemberID="viewController">
+                <viewController id="IWw-tz-OUj" customClass="StageViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="imP-Ng-HWv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="99" translatesAutoresizingMaskIntoConstraints="NO" id="jXs-Hy-xza">
-                                <rect key="frame" x="46.5" y="202.5" width="321" height="437"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="dcV-QY-A6z">
+                                <rect key="frame" x="30" y="130" width="354" height="548"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="121" translatesAutoresizingMaskIntoConstraints="NO" id="2Up-3J-3zA">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="vth-t4-di1">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="97.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGm-HF-SXH">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="8cI-HM-rw0"/>
-                                                    <constraint firstAttribute="height" constant="50" id="BdY-Ry-edn"/>
-                                                </constraints>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etH-am-PsB">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="97.5"/>
                                                 <state key="normal" title="Button" image="syuutenn"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="IWw-tz-OUj" eventType="touchUpInside" id="Z1i-Mh-APk"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZk-se-UP1">
-                                                <rect key="frame" x="221" y="0.0" width="100" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="9LB-Z6-RBx"/>
-                                                    <constraint firstAttribute="height" constant="30" id="ROh-Oe-AAb"/>
-                                                </constraints>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOF-Pj-PFy">
+                                                <rect key="frame" x="207" y="0.0" width="147" height="97.5"/>
                                                 <state key="normal" title="Button" image="senjou"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="IWw-tz-OUj" eventType="touchUpInside" id="5L0-hE-fGF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="121" translatesAutoresizingMaskIntoConstraints="NO" id="J0i-j8-T4t">
-                                        <rect key="frame" x="0.0" y="149" width="321" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="nuX-S8-vaS">
+                                        <rect key="frame" x="0.0" y="150.5" width="354" height="97"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPX-N4-EFL">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Ezt-oF-X5V"/>
-                                                    <constraint firstAttribute="width" constant="100" id="Y3s-JH-Btw"/>
-                                                </constraints>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwg-aZ-g80">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="97"/>
                                                 <state key="normal" title="Button" image="pokesuta2"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="IWw-tz-OUj" eventType="touchUpInside" id="Bwm-JW-8YM"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yz-d2-xH7">
-                                                <rect key="frame" x="221" y="0.0" width="100" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="geB-Eb-rGe"/>
-                                                    <constraint firstAttribute="width" constant="100" id="loT-K1-IKd"/>
-                                                </constraints>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-Wu-k4u">
+                                                <rect key="frame" x="207" y="0.0" width="147" height="97"/>
                                                 <state key="normal" title="Button" image="karosu"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="IWw-tz-OUj" eventType="touchUpInside" id="R6l-xD-Mul"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="121" translatesAutoresizingMaskIntoConstraints="NO" id="XsN-qW-qxJ">
-                                        <rect key="frame" x="0.0" y="278" width="321" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="fWa-7V-v12">
+                                        <rect key="frame" x="0.0" y="300.5" width="354" height="97.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daZ-oJ-7PW">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="DDd-Ma-zWh"/>
-                                                    <constraint firstAttribute="height" constant="30" id="nDe-ez-HK6"/>
-                                                </constraints>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-zx-b5M">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="97.5"/>
                                                 <state key="normal" title="Button" image="sumamura"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="IWw-tz-OUj" eventType="touchUpInside" id="k77-aC-SP9"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-B5-EQY">
-                                                <rect key="frame" x="221" y="0.0" width="100" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="7wU-Du-IKb"/>
-                                                    <constraint firstAttribute="height" constant="30" id="8iN-3G-Np2"/>
-                                                </constraints>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tA-T5-5P5">
+                                                <rect key="frame" x="207" y="0.0" width="147" height="97.5"/>
                                                 <state key="normal" title="Button" image="muramati"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="IWw-tz-OUj" eventType="touchUpInside" id="jcq-jx-Ok1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSK-7x-jdv">
-                                        <rect key="frame" x="0.0" y="407" width="100" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="nqq-xp-rxY"/>
-                                            <constraint firstAttribute="height" constant="30" id="ypg-cm-f5F"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="rairatto"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="uto-m7-Hxm">
+                                        <rect key="frame" x="0.0" y="451" width="354" height="97"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9M-fg-9vD">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="97"/>
+                                                <state key="normal" title="Button" image="rairatto"/>
+                                                <connections>
+                                                    <action selector="stagePressed:" destination="IWw-tz-OUj" eventType="touchUpInside" id="A23-A4-2CP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJc-jI-0R3">
+                                                <rect key="frame" x="207" y="0.0" width="147" height="97"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jXs-Hy-xza" firstAttribute="centerY" secondItem="imP-Ng-HWv" secondAttribute="centerY" id="2Ml-sR-Esz"/>
-                            <constraint firstItem="jXs-Hy-xza" firstAttribute="centerX" secondItem="imP-Ng-HWv" secondAttribute="centerX" id="9A0-V9-8Ee"/>
+                            <constraint firstItem="dcV-QY-A6z" firstAttribute="leading" secondItem="4RK-2w-agh" secondAttribute="leading" constant="30" id="4cP-dz-Syc"/>
+                            <constraint firstItem="4RK-2w-agh" firstAttribute="trailing" secondItem="dcV-QY-A6z" secondAttribute="trailing" constant="30" id="FKn-Fl-8ta"/>
+                            <constraint firstItem="dcV-QY-A6z" firstAttribute="top" secondItem="4RK-2w-agh" secondAttribute="top" constant="130" id="Uv5-No-6az"/>
+                            <constraint firstItem="4RK-2w-agh" firstAttribute="bottom" secondItem="dcV-QY-A6z" secondAttribute="bottom" constant="130" id="hcc-h6-QP2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4RK-2w-agh"/>
                     </view>

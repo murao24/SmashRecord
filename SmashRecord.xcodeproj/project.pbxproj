@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B3811246936930033DBA7 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3810246936930033DBA7 /* StageViewController.swift */; };
 		04373F03245CF59000583C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F02245CF59000583C58 /* AppDelegate.swift */; };
 		04373F05245CF59000583C58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F04245CF59000583C58 /* SceneDelegate.swift */; };
 		04373F07245CF59000583C58 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F06245CF59000583C58 /* NoteViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040B3810246936930033DBA7 /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = SmashRecord/Views/StageViewController.swift; sourceTree = SOURCE_ROOT; };
 		04373EFF245CF59000583C58 /* SmashRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04373F02245CF59000583C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04373F04245CF59000583C58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				04373F08245CF59000583C58 /* RecordViewController.swift */,
 				048CCE9C2463F53600B4C400 /* RecordFormViewController.swift */,
 				048CCE9E2463F54C00B4C400 /* FighterImageViewController.swift */,
+				040B3810246936930033DBA7 /* StageViewController.swift */,
 				04373F1E245CFE9200583C58 /* AccountViewController.swift */,
 				04CD59C9245D364A00976595 /* AlertController.swift */,
 			);
@@ -289,6 +292,7 @@
 				046BBDF8245E8E8E00B8A8E9 /* FighterNoteViewController.swift in Sources */,
 				04CD59CA245D364A00976595 /* AlertController.swift in Sources */,
 				04373F07245CF59000583C58 /* NoteViewController.swift in Sources */,
+				040B3811246936930033DBA7 /* StageViewController.swift in Sources */,
 				04373F1F245CFE9200583C58 /* AccountViewController.swift in Sources */,
 				04373F03245CF59000583C58 /* AppDelegate.swift in Sources */,
 				04373F21245CFF2500583C58 /* UIView+AddBorder.swift in Sources */,
