@@ -19,9 +19,11 @@ class StageViewController: UIViewController {
     @IBAction func stagePressed(_ sender: UIButton) {
         
         let num = sender.tag
+        let stageName = S.stageArray[num]
         
         let preVC = self.presentingViewController as! RecordFormViewController
-        preVC.stageView.setImage(UIImage(named: S.stageArray[num]), for: .normal)
+        preVC.stageView.setImage(UIImage(named: stageName), for: .normal)
+        preVC.stage = stageName
         dismiss(animated: true, completion: nil)
 
     }

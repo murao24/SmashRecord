@@ -40,10 +40,12 @@ class FighterImageViewController: UIViewController {
         case "myFighter":
             let preVC = self.presentingViewController as! RecordFormViewController
             preVC.myFighterView.setImage(UIImage(named: fighterName), for: .normal)
+            preVC.myFighter = fighterName
             dismiss(animated: true, completion: nil)
         case "opponentFighter":
             let preVC = self.presentingViewController as! RecordFormViewController
             preVC.opponentFighterView.setImage(UIImage(named: fighterName), for: .normal)
+            preVC.opponentFighter = fighterName
             dismiss(animated: true, completion: nil)
         default:
             print("Error saving fighter image.")

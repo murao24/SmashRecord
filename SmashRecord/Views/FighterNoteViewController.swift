@@ -105,8 +105,6 @@ class FighterNoteViewController: UITableViewController, UITextViewDelegate {
     
     @IBAction func addPressed(_ sender: UIBarButtonItem) {
         
-//        let rect = CGRect(x: 15, y: 45, width: 240, height: 120)
-//        let textView = UITextView(frame: rect)
         
         let alert = UIAlertController(title: "メモを追加", message: "", preferredStyle: .alert)
         

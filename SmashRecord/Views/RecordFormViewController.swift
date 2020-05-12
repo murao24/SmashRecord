@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RecordFormViewController: UIViewController {
+    
+    var records: Results<Record>?
+    
+    let realm = try! Realm()
     
     @IBOutlet weak var myFighterView: UIButton!
     @IBOutlet weak var opponentFighterView: UIButton!
@@ -16,13 +21,17 @@ class RecordFormViewController: UIViewController {
     @IBOutlet weak var winButton: UIButton!
     @IBOutlet weak var loseButton: UIButton!
     
+    var myFighter = "wario"
+    var opponentFighter = "mario"
+    var stage = "syuutenn"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myFighterView.setImage(UIImage(named: "wario"), for: .normal)
-        opponentFighterView.setImage(UIImage(named: "mario"), for: .normal)
-        stageView.setImage(UIImage(named: "syuutenn"), for: .normal)
+        myFighterView.setImage(UIImage(named: myFighter), for: .normal)
+        opponentFighterView.setImage(UIImage(named: opponentFighter), for: .normal)
+        stageView.setImage(UIImage(named: stage), for: .normal)
         
     }
     
@@ -51,7 +60,45 @@ class RecordFormViewController: UIViewController {
         performSegue(withIdentifier: "goToSelectStage", sender: self)
     }
     
+    @IBAction func resultPressed(_ sender: UIButton) {
+        
+        let result = sender.currentTitle
+        
+        switch result {
+        case "勝ち":
+            winButton.backgroundColor = UIColor(red: 29 / 255, green: 161 / 255, blue: 242 / 255, alpha: 1)
+            loseButton.backgroundColor = UIColor.black
+        case "負け":
+            loseButton.backgroundColor = UIColor(red: 29 / 255, green: 161 / 255, blue: 242 / 255, alpha: 1)
+            winButton.backgroundColor = UIColor.black
+        default:
+            print("Error tapping win or lose.")
+        }
+
+    }
+    
+    
     @IBAction func savePressed(_ sender: UIButton) {
+        
+        let newRecord = Record()
+        newRecord.myFighter = myFighter
+        newRecord.opponentFighter = opponentFighter
+        newRecord.stage = stage
+        save(record: newRecord)
+
+    }
+    
+    func save(record: Record) {
+        
+        do {
+            try realm.write {
+                realm.add(record)
+            }
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print("Error saving record \(error)")
+        }
+
     }
     
     

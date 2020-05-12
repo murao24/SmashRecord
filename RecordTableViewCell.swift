@@ -13,7 +13,8 @@ class RecordTableViewCell: UITableViewCell {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var myFighterView: UIImageView!
     @IBOutlet weak var opponentFighterView: UIImageView!
-    @IBOutlet weak var stageLabel: UILabel!
+    @IBOutlet weak var stageView: UIImageView!
+    
     
     
     override func awakeFromNib() {
