@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AnalyzeViewController: UIViewController {
+    
+    let realm = try! Realm()
+    
+    var records: Results<Record>?
+    
+    @IBOutlet weak var fighterLabel: UIButton!
+    @IBOutlet weak var stageLabel: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +24,14 @@ class AnalyzeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-
+    @IBAction func sortFighter(_ sender: UIButton) {
+        onButton(button: fighterLabel)
+        offButton(button: stageLabel)
+    }
+    
+    @IBAction func sortStage(_ sender: UIButton) {
+        onButton(button: stageLabel)
+        offButton(button: fighterLabel)
+    }
+    
 }

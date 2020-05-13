@@ -114,16 +114,7 @@ class RecordFormViewController: UIViewController {
 
     }
     
-    // button toggle
-    func onButton(button: UIButton) {
-        button.isSelected = true
-        button.isEnabled = false
-    }
-    
-    func offButton(button: UIButton) {
-        button.isSelected = false
-        button.isEnabled = true
-    }
+
     
     
 }
