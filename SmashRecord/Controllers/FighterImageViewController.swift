@@ -27,7 +27,6 @@ class FighterImageViewController: UIViewController {
             count += 1
         }
         
-        
     }
     
     @IBAction func fighterPressed(_ sender: UIButton) {

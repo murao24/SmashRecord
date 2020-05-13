@@ -32,6 +32,7 @@ class RecordFormViewController: UIViewController {
         myFighterView.setImage(UIImage(named: myFighter), for: .normal)
         opponentFighterView.setImage(UIImage(named: opponentFighter), for: .normal)
         stageView.setImage(UIImage(named: stage), for: .normal)
+        onButton(button: winButton)
         
     }
     
@@ -66,13 +67,13 @@ class RecordFormViewController: UIViewController {
         
         switch result {
         case "勝ち":
-            winButton.backgroundColor = UIColor(red: 29 / 255, green: 161 / 255, blue: 242 / 255, alpha: 1)
-            loseButton.backgroundColor = UIColor.black
+            onButton(button: winButton)
+            offButton(button: loseButton)
         case "負け":
-            loseButton.backgroundColor = UIColor(red: 29 / 255, green: 161 / 255, blue: 242 / 255, alpha: 1)
-            winButton.backgroundColor = UIColor.black
+            onButton(button: loseButton)
+            offButton(button: winButton)
         default:
-            print("Error tapping win or lose.")
+            break
         }
 
     }
@@ -84,9 +85,21 @@ class RecordFormViewController: UIViewController {
         newRecord.myFighter = myFighter
         newRecord.opponentFighter = opponentFighter
         newRecord.stage = stage
+        newRecord.date = Date()
+        if winButton.isSelected == true {
+            newRecord.result = true
+        } else {
+            newRecord.result = false
+        }
+
         save(record: newRecord)
 
     }
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func save(record: Record) {
         
@@ -99,6 +112,17 @@ class RecordFormViewController: UIViewController {
             print("Error saving record \(error)")
         }
 
+    }
+    
+    // button toggle
+    func onButton(button: UIButton) {
+        button.isSelected = true
+        button.isEnabled = false
+    }
+    
+    func offButton(button: UIButton) {
+        button.isSelected = false
+        button.isEnabled = true
     }
     
     

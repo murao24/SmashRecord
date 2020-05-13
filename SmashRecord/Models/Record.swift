@@ -11,9 +11,10 @@ import RealmSwift
 
 class Record: Object {
     
-    dynamic var result: Bool?
+    @objc dynamic var result: Bool = true
     @objc dynamic var myFighter: String = ""
     @objc dynamic var opponentFighter: String = ""
     @objc dynamic var stage: String = ""
+    @objc dynamic var date = Date()
 
 }
