@@ -19,7 +19,6 @@ class NoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         saveFighter()
         tableView.reloadData()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
