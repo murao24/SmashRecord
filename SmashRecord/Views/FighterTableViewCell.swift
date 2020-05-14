@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class FighterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fighterView: UIImageView!
     @IBOutlet weak var fighterName: UILabel!

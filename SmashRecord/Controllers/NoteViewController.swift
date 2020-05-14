@@ -43,7 +43,7 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FighterTableViewCell
         cell.fighterName.text = S.fightersArray[indexPath.row][0]
         cell.fighterView.image = UIImage(named: S.fightersArray[indexPath.row][1])
         

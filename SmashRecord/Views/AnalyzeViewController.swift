@@ -21,7 +21,7 @@ class AnalyzeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        onButton(button: fighterLabel)
     }
     
     @IBAction func sortFighter(_ sender: UIButton) {
@@ -34,4 +34,26 @@ class AnalyzeViewController: UIViewController {
         offButton(button: fighterLabel)
     }
     
+}
+
+extension AnalyzeViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch fighterLabel.isSelected {
+        case true:
+            return S.fightersArray.count
+        case false:
+            return 7
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        
+        return cell
+    }
+    
+
 }
