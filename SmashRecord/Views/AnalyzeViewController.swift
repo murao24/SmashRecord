@@ -55,12 +55,7 @@ extension AnalyzeViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - TableView DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch fighterLabel.isSelected {
-        case true:
-            return S.fightersArray.count
-        case false:
-            return 7
-        }
+        return S.fightersArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
