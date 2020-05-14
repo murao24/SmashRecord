@@ -67,12 +67,10 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
         if let record = records?[indexPath.row] {
             if record.result == true {
                 cell.resultLabel.text = "勝ち"
-                cell.addBorder(width: 5, color: .orange, position: .left)
-                cell.addBorder(width: 5, color: .orange, position: .right)
+                cell.addBorder(width: 10, color: .orange, position: .left)
             } else {
                 cell.resultLabel.text = "負け"
-                cell.addBorder(width: 5, color: .systemBlue, position: .left)
-                cell.addBorder(width: 5, color: .systemBlue, position: .right)
+                cell.addBorder(width: 10, color: .systemBlue, position: .left)
             }
             cell.myFighterView.image = UIImage(named: record.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 0))
             cell.opponentFighterView.image = UIImage(named: record.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
