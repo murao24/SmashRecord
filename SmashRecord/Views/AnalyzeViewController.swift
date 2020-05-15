@@ -63,6 +63,7 @@ class AnalyzeViewController: UIViewController {
         onButton(button: myFighterLabel)
         offButton(button: versusOpponentLabel)
         offButton(button: stageLabel)
+        sortByFighterLabel.setTitle("自分", for: .normal)
         tableView.reloadData()
     }
     
@@ -70,6 +71,7 @@ class AnalyzeViewController: UIViewController {
         onButton(button: versusOpponentLabel)
         offButton(button: myFighterLabel)
         offButton(button: stageLabel)
+        sortByFighterLabel.setTitle("相手", for: .normal)
         tableView.reloadData()
     }
     
@@ -78,7 +80,7 @@ class AnalyzeViewController: UIViewController {
         offButton(button: myFighterLabel)
         offButton(button: versusOpponentLabel)
         // ステージを選択時、キャラ->ステージ
-        sortByFighterLabel.titleLabel?.text = "ステージ"
+        sortByFighterLabel.setTitle("ステージ", for: .normal)
         tableView.reloadData()
     }
     

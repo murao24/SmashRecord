@@ -1179,7 +1179,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX3-AC-fRP">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
-                                        <state key="normal" title="キャラ">
+                                        <state key="normal" title="自分">
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
