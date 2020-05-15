@@ -19,14 +19,26 @@ class AnalyzeViewController: UIViewController {
     @IBOutlet weak var fighterLabel: UIButton!
     @IBOutlet weak var stageLabel: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortByFighterLabel: UIButton!
+    @IBOutlet weak var sortByGameCountLabel: UIButton!
+    @IBOutlet weak var sortByWinCountLabel: UIButton!
+    @IBOutlet weak var sortByLoseCountLabel: UIButton!
+    @IBOutlet weak var sortByWinRateLabel: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.delegate = self
-        loadRecord()
+        
+        // button is selected
         onButton(button: fighterLabel)
+        onButton(button: sortByFighterLabel)
+        
+        // tableView
+        loadRecord(sortedBy: "fighterID", ascending: true)
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +46,7 @@ class AnalyzeViewController: UIViewController {
         calculateRecord()
         tableView.reloadData()
     }
+    
 
     @IBAction func sortFighter(_ sender: UIButton) {
         onButton(button: fighterLabel)
@@ -45,11 +58,64 @@ class AnalyzeViewController: UIViewController {
         offButton(button: fighterLabel)
     }
     
-    func loadRecord() {
-        records = realm.objects(Record.self)
-        analyzeByFighters = realm.objects(AnalyzeByFighter.self)
+    // switch Button color
+    @IBAction func sortButtonPressed(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 0:
+            onButton(button: sortByFighterLabel)
+            offButton(button: sortByGameCountLabel)
+            offButton(button: sortByWinCountLabel)
+            offButton(button: sortByLoseCountLabel)
+            offButton(button: sortByWinRateLabel)
+            loadRecord(sortedBy: "fighterID", ascending: true)
+        case 1:
+            offButton(button: sortByFighterLabel)
+            onButton(button: sortByGameCountLabel)
+            offButton(button: sortByWinCountLabel)
+            offButton(button: sortByLoseCountLabel)
+            offButton(button: sortByWinRateLabel)
+            loadRecord(sortedBy: "gameCount")
+        case 2:
+            offButton(button: sortByFighterLabel)
+            offButton(button: sortByGameCountLabel)
+            onButton(button: sortByWinCountLabel)
+            offButton(button: sortByLoseCountLabel)
+            offButton(button: sortByWinRateLabel)
+            loadRecord(sortedBy: "winCount")
+        case 3:
+            offButton(button: sortByFighterLabel)
+            offButton(button: sortByGameCountLabel)
+            offButton(button: sortByWinCountLabel)
+            onButton(button: sortByLoseCountLabel)
+            offButton(button: sortByWinRateLabel)
+            loadRecord(sortedBy: "loseCount")
+        case 4:
+            offButton(button: sortByFighterLabel)
+            offButton(button: sortByGameCountLabel)
+            offButton(button: sortByWinCountLabel)
+            offButton(button: sortByLoseCountLabel)
+            onButton(button: sortByWinRateLabel)
+            loadRecord(sortedBy: "winRate")
+        default:
+            offButton(button: sortByFighterLabel)
+            offButton(button: sortByGameCountLabel)
+            offButton(button: sortByWinRateLabel)
+            offButton(button: sortByWinCountLabel)
+            offButton(button: sortByLoseCountLabel)
+            loadRecord(sortedBy: "myFighter")
+        }
+
     }
     
+    func loadRecord(sortedBy: String, ascending: Bool = false) {
+        records = realm.objects(Record.self)
+        analyzeByFighters = realm.objects(AnalyzeByFighter.self).sorted(byKeyPath: sortedBy, ascending: ascending)
+        tableView.reloadData()
+    }
+    
+    
+    // Add database of analyzeByFighter
     func calculateRecord() {
         
         for i in 0...S.fightersArray.count - 1 {
@@ -59,6 +125,7 @@ class AnalyzeViewController: UIViewController {
             let newAnalyzeByFighter = AnalyzeByFighter()
             newAnalyzeByFighter.myFighter = S.fightersArray[i][1]
             if  game?.count == 0  {
+                newAnalyzeByFighter.fighterID = i
                 newAnalyzeByFighter.gameCount = 0
                 newAnalyzeByFighter.winCount = 0
                 newAnalyzeByFighter.winRate = 0
@@ -67,7 +134,7 @@ class AnalyzeViewController: UIViewController {
             } else {
                 
                 if let game = game, let win = win {
-                    
+                    newAnalyzeByFighter.fighterID = i
                     newAnalyzeByFighter.gameCount = game.count
                     newAnalyzeByFighter.winCount = win.count
                     newAnalyzeByFighter.loseCount = game.count - win.count
@@ -92,7 +159,6 @@ class AnalyzeViewController: UIViewController {
         }
     }
     
-    
 }
 
 
@@ -107,10 +173,20 @@ extension AnalyzeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
-        
-        cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
+        cell.winRateLabel.adjustsFontSizeToFitWidth = true
         
         if let analyzeByFighters = analyzeByFighters?[indexPath.row] {
+            
+            guard analyzeByFighters.gameCount != 0 else {
+                cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
+                cell.gameCountLabel.text = "-"
+                cell.winCountLabel.text = "-"
+                cell.loseCountLabel.text = "-"
+                cell.winRateLabel.text = "-"
+                return cell
+            }
+
+            cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
             cell.gameCountLabel.text = "\(String(analyzeByFighters.gameCount))"
             cell.winCountLabel.text = "\(String(analyzeByFighters.winCount))"
             cell.loseCountLabel.text = "\(String(analyzeByFighters.loseCount))"
