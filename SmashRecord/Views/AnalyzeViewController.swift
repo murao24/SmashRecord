@@ -14,6 +14,7 @@ class AnalyzeViewController: UIViewController {
     let realm = try! Realm()
     
     var records: Results<Record>?
+    var analyzeByFighters: Results<AnalyzeByFighter>?
     
     @IBOutlet weak var fighterLabel: UIButton!
     @IBOutlet weak var stageLabel: UIButton!
@@ -30,6 +31,7 @@ class AnalyzeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        calculateRecord()
         tableView.reloadData()
     }
 
@@ -45,7 +47,51 @@ class AnalyzeViewController: UIViewController {
     
     func loadRecord() {
         records = realm.objects(Record.self)
+        analyzeByFighters = realm.objects(AnalyzeByFighter.self)
     }
+    
+    func calculateRecord() {
+        
+        for i in 0...S.fightersArray.count - 1 {
+            let game = records?.filter("myFighter == %@",S.fightersArray[i][1])
+            let win = game?.filter("result = true")
+            
+            let newAnalyzeByFighter = AnalyzeByFighter()
+            newAnalyzeByFighter.myFighter = S.fightersArray[i][1]
+            if  game?.count == 0  {
+                newAnalyzeByFighter.gameCount = 0
+                newAnalyzeByFighter.winCount = 0
+                newAnalyzeByFighter.winRate = 0
+                newAnalyzeByFighter.loseCount = 0
+                saveAnalyzeByFighter(analyzeByFighter: newAnalyzeByFighter)
+            } else {
+                
+                if let game = game, let win = win {
+                    
+                    newAnalyzeByFighter.gameCount = game.count
+                    newAnalyzeByFighter.winCount = win.count
+                    newAnalyzeByFighter.loseCount = game.count - win.count
+                    newAnalyzeByFighter.winRate = Int(CGFloat(win.count) / CGFloat(game.count) * 100)
+                    
+                    saveAnalyzeByFighter(analyzeByFighter: newAnalyzeByFighter)
+                    
+                }
+            }
+            
+        }
+
+    }
+    
+    func saveAnalyzeByFighter(analyzeByFighter: AnalyzeByFighter) {
+        do {
+            try realm.write {
+                realm.add(analyzeByFighter, update: .modified)
+            }
+        } catch {
+            print("Error saving calculating records \(error)")
+        }
+    }
+    
     
 }
 
@@ -62,31 +108,15 @@ extension AnalyzeViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
         
-        // キャラ別
-        let game = records?.filter("myFighter == %@",S.fightersArray[indexPath.row][1])
-        let win = game?.filter("result = true")
-
         cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-            
-        guard game?.count != 0 else {
-            cell.gameCountLabel.text = "-"
-            cell.winCountLabel.text = "-"
-            cell.loseCountLabel.text = "-"
-            cell.winRateLabel.text = "-"
-            return cell
-        }
         
-        if let game = game, let win = win {
-            
-            let loseCount = game.count - win.count
-            let winRate = Int(CGFloat(win.count) / CGFloat(game.count) * 100)
-            
-            cell.gameCountLabel.text = "\(game.count)"
-            cell.winCountLabel.text = "\(win.count)"
-            cell.loseCountLabel.text = "\(loseCount)"
-            cell.winRateLabel.text = "\(winRate)%"
-            cell.winRateLabel.adjustsFontSizeToFitWidth = true
+        if let analyzeByFighters = analyzeByFighters?[indexPath.row] {
+            cell.gameCountLabel.text = "\(String(analyzeByFighters.gameCount))"
+            cell.winCountLabel.text = "\(String(analyzeByFighters.winCount))"
+            cell.loseCountLabel.text = "\(String(analyzeByFighters.loseCount))"
+            cell.winRateLabel.text = "\(String(analyzeByFighters.winRate))%"
         }
+
         
         return cell
     }

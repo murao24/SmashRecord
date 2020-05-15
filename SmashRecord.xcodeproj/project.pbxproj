@@ -10,7 +10,7 @@
 		040B3811246936930033DBA7 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3810246936930033DBA7 /* StageViewController.swift */; };
 		040B3813246BB4BC0033DBA7 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3812246BB4BC0033DBA7 /* AnalyzeViewController.swift */; };
 		040B3815246BBD420033DBA7 /* SwitchButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3814246BBD420033DBA7 /* SwitchButtonController.swift */; };
-		042EF406246E16F8008131FA /* Analyze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF405246E16F8008131FA /* Analyze.swift */; };
+		042EF406246E16F8008131FA /* AnalyzeByFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF405246E16F8008131FA /* AnalyzeByFighter.swift */; };
 		04373F03245CF59000583C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F02245CF59000583C58 /* AppDelegate.swift */; };
 		04373F05245CF59000583C58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F04245CF59000583C58 /* SceneDelegate.swift */; };
 		04373F07245CF59000583C58 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F06245CF59000583C58 /* NoteViewController.swift */; };
@@ -42,7 +42,7 @@
 		040B3810246936930033DBA7 /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = SmashRecord/Views/StageViewController.swift; sourceTree = SOURCE_ROOT; };
 		040B3812246BB4BC0033DBA7 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnalyzeViewController.swift; path = SmashRecord/Views/AnalyzeViewController.swift; sourceTree = SOURCE_ROOT; };
 		040B3814246BBD420033DBA7 /* SwitchButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButtonController.swift; sourceTree = "<group>"; };
-		042EF405246E16F8008131FA /* Analyze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Analyze.swift; path = SmashRecord/Controllers/Analyze.swift; sourceTree = SOURCE_ROOT; };
+		042EF405246E16F8008131FA /* AnalyzeByFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnalyzeByFighter.swift; path = SmashRecord/Controllers/AnalyzeByFighter.swift; sourceTree = SOURCE_ROOT; };
 		04373EFF245CF59000583C58 /* SmashRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04373F02245CF59000583C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04373F04245CF59000583C58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				046BBDF5245E51E100B8A8E9 /* Fighter.swift */,
 				046BBDF9245E9B5500B8A8E9 /* FighterNote.swift */,
 				046BBDFF2463819600B8A8E9 /* Record.swift */,
-				042EF405246E16F8008131FA /* Analyze.swift */,
+				042EF405246E16F8008131FA /* AnalyzeByFighter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 				04373F1D245CFE8100583C58 /* RegisterViewController.swift in Sources */,
 				04373F1B245CFE7600583C58 /* LoginViewController.swift in Sources */,
 				046BBDFE245F972800B8A8E9 /* Constants.swift in Sources */,
-				042EF406246E16F8008131FA /* Analyze.swift in Sources */,
+				042EF406246E16F8008131FA /* AnalyzeByFighter.swift in Sources */,
 				04373F05245CF59000583C58 /* SceneDelegate.swift in Sources */,
 				046BBDFA245E9B5500B8A8E9 /* FighterNote.swift in Sources */,
 				040B3815246BBD420033DBA7 /* SwitchButtonController.swift in Sources */,
