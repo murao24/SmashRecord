@@ -16,7 +16,8 @@ class AnalyzeViewController: UIViewController {
     var records: Results<Record>?
     var analyzeByFighters: Results<AnalyzeByFighter>?
     
-    @IBOutlet weak var fighterLabel: UIButton!
+    @IBOutlet weak var myFighterLabel: UIButton!
+    @IBOutlet weak var versusOpponentLabel: UIButton!
     @IBOutlet weak var stageLabel: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortByFighterLabel: UIButton!
@@ -33,7 +34,7 @@ class AnalyzeViewController: UIViewController {
         tableView.delegate = self
         
         // button is selected
-        onButton(button: fighterLabel)
+        onButton(button: myFighterLabel)
         onButton(button: sortByFighterLabel)
         
         // tableView
@@ -48,14 +49,23 @@ class AnalyzeViewController: UIViewController {
     }
     
 
-    @IBAction func sortFighter(_ sender: UIButton) {
-        onButton(button: fighterLabel)
+    @IBAction func sortMyFighter(_ sender: UIButton) {
+        onButton(button: myFighterLabel)
+        offButton(button: versusOpponentLabel)
         offButton(button: stageLabel)
     }
     
+    @IBAction func sortOpponentFighter(_ sender: UIButton) {
+        onButton(button: versusOpponentLabel)
+        offButton(button: myFighterLabel)
+        offButton(button: stageLabel)
+    }
+    
+    
     @IBAction func sortStage(_ sender: UIButton) {
         onButton(button: stageLabel)
-        offButton(button: fighterLabel)
+        offButton(button: versusOpponentLabel)
+        offButton(button: myFighterLabel)
     }
     
     // switch Button color
@@ -98,12 +108,7 @@ class AnalyzeViewController: UIViewController {
             onButton(button: sortByWinRateLabel)
             loadRecord(sortedBy: "winRate")
         default:
-            offButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinRateLabel)
-            offButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            loadRecord(sortedBy: "myFighter")
+            return
         }
 
     }

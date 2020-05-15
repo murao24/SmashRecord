@@ -1142,17 +1142,28 @@
                                 <rect key="frame" x="20" y="98" width="374" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4Q-qq-hVI">
-                                        <rect key="frame" x="0.0" y="0.0" width="184.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="キャラ">
+                                        <state key="normal" title="自分">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortFighter:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="N6u-aS-aNL"/>
+                                            <action selector="sortMyFighter:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="N6u-aS-aNL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-60-cSz">
+                                        <rect key="frame" x="126.5" y="0.0" width="121" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="相手">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sortMyFighter:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="6vR-LG-bjl"/>
+                                            <action selector="sortOpponentFighter:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="77G-on-kDV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-Kj-9sJ">
-                                        <rect key="frame" x="189.5" y="0.0" width="184.5" height="30"/>
+                                        <rect key="frame" x="252.5" y="0.0" width="121.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="ステージ">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1233,7 +1244,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Analyze" id="qlk-Xt-Jr1"/>
                     <connections>
-                        <outlet property="fighterLabel" destination="b4Q-qq-hVI" id="AfK-H6-qJi"/>
+                        <outlet property="myFighterLabel" destination="b4Q-qq-hVI" id="AfK-H6-qJi"/>
                         <outlet property="sortByFighterLabel" destination="rX3-AC-fRP" id="i8h-Yn-Em4"/>
                         <outlet property="sortByGameCountLabel" destination="RtG-m5-mUf" id="4AN-Ij-cRY"/>
                         <outlet property="sortByLoseCountLabel" destination="nQb-zz-XVx" id="x5T-I8-5AV"/>
@@ -1241,11 +1252,12 @@
                         <outlet property="sortByWinRateLabel" destination="RvT-mS-jIB" id="RAY-nT-Agr"/>
                         <outlet property="stageLabel" destination="CL1-Kj-9sJ" id="YOH-sy-Bwo"/>
                         <outlet property="tableView" destination="PNi-OV-RNn" id="ZtL-Qg-ts2"/>
+                        <outlet property="versusOpponentLabel" destination="XAK-60-cSz" id="mNM-IJ-0Sh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBK-Nh-7HF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3734.7826086956525" y="1030.5803571428571"/>
+            <point key="canvasLocation" x="3626" y="1031"/>
         </scene>
         <!--Record Form View Controller-->
         <scene sceneID="ZQA-3h-KdM">
