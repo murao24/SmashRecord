@@ -134,7 +134,12 @@ class AnalyzeViewController: UIViewController {
         records = realm.objects(Record.self)
         analyzeByFighters = realm.objects(AnalyzeByFighter.self).sorted(byKeyPath: sortedBy, ascending: ascending)
         analyzeByOpponentFighters = realm.objects(AnalyzeByOpponentFighter.self).sorted(byKeyPath: sortedBy, ascending: ascending)
-        analyzeByStages = realm.objects(AnalyzeByStage.self).sorted(byKeyPath: "stageID", ascending: true)
+        guard sortedBy != "fighterID" else {
+            analyzeByStages = realm.objects(AnalyzeByStage.self).sorted(byKeyPath: "stageID", ascending: true)
+            tableView.reloadData()
+            return
+        }
+        analyzeByStages = realm.objects(AnalyzeByStage.self).sorted(byKeyPath: sortedBy, ascending: ascending)
         tableView.reloadData()
     }
     
