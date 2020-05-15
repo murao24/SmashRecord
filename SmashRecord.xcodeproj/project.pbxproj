@@ -10,6 +10,7 @@
 		040B3811246936930033DBA7 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3810246936930033DBA7 /* StageViewController.swift */; };
 		040B3813246BB4BC0033DBA7 /* AnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3812246BB4BC0033DBA7 /* AnalyzeViewController.swift */; };
 		040B3815246BBD420033DBA7 /* SwitchButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B3814246BBD420033DBA7 /* SwitchButtonController.swift */; };
+		0423EFE9246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423EFE8246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift */; };
 		042EF406246E16F8008131FA /* AnalyzeByFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EF405246E16F8008131FA /* AnalyzeByFighter.swift */; };
 		04373F03245CF59000583C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F02245CF59000583C58 /* AppDelegate.swift */; };
 		04373F05245CF59000583C58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F04245CF59000583C58 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 		040B3810246936930033DBA7 /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StageViewController.swift; path = SmashRecord/Views/StageViewController.swift; sourceTree = SOURCE_ROOT; };
 		040B3812246BB4BC0033DBA7 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnalyzeViewController.swift; path = SmashRecord/Views/AnalyzeViewController.swift; sourceTree = SOURCE_ROOT; };
 		040B3814246BBD420033DBA7 /* SwitchButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButtonController.swift; sourceTree = "<group>"; };
+		0423EFE8246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeByOpponentFighter.swift; sourceTree = "<group>"; };
 		042EF405246E16F8008131FA /* AnalyzeByFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnalyzeByFighter.swift; path = SmashRecord/Controllers/AnalyzeByFighter.swift; sourceTree = SOURCE_ROOT; };
 		04373EFF245CF59000583C58 /* SmashRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04373F02245CF59000583C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				046BBDF9245E9B5500B8A8E9 /* FighterNote.swift */,
 				046BBDFF2463819600B8A8E9 /* Record.swift */,
 				042EF405246E16F8008131FA /* AnalyzeByFighter.swift */,
+				0423EFE8246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				046BBDF6245E51E100B8A8E9 /* Fighter.swift in Sources */,
 				046BBE002463819600B8A8E9 /* Record.swift in Sources */,
 				046BBE062463989E00B8A8E9 /* RecordTableViewCell.swift in Sources */,
+				0423EFE9246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift in Sources */,
 				04E166C6246CE977008D1355 /* AnalyzeTableViewCell.swift in Sources */,
 				046BBDF8245E8E8E00B8A8E9 /* FighterNoteViewController.swift in Sources */,
 				04CD59CA245D364A00976595 /* AlertController.swift in Sources */,

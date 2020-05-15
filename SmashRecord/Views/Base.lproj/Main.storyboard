@@ -1142,7 +1142,7 @@
                                 <rect key="frame" x="20" y="98" width="374" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4Q-qq-hVI">
-                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="184.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="自分">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1152,7 +1152,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-60-cSz">
-                                        <rect key="frame" x="126.5" y="0.0" width="121" height="30"/>
+                                        <rect key="frame" x="189.5" y="0.0" width="184.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="相手">
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1160,16 +1160,6 @@
                                         <connections>
                                             <action selector="sortMyFighter:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="6vR-LG-bjl"/>
                                             <action selector="sortOpponentFighter:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="77G-on-kDV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-Kj-9sJ">
-                                        <rect key="frame" x="252.5" y="0.0" width="121.5" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="ステージ">
-                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sortStage:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="D5B-h2-835"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1250,7 +1240,6 @@
                         <outlet property="sortByLoseCountLabel" destination="nQb-zz-XVx" id="x5T-I8-5AV"/>
                         <outlet property="sortByWinCountLabel" destination="OXN-ps-nk6" id="w0Z-5H-UzU"/>
                         <outlet property="sortByWinRateLabel" destination="RvT-mS-jIB" id="RAY-nT-Agr"/>
-                        <outlet property="stageLabel" destination="CL1-Kj-9sJ" id="YOH-sy-Bwo"/>
                         <outlet property="tableView" destination="PNi-OV-RNn" id="ZtL-Qg-ts2"/>
                         <outlet property="versusOpponentLabel" destination="XAK-60-cSz" id="mNM-IJ-0Sh"/>
                     </connections>
