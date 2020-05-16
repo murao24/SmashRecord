@@ -91,7 +91,7 @@
                                             <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1691,9 +1691,9 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gX2-C5-ZcX" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="QV3-td-bL6" kind="relationship" relationship="viewControllers" id="tOa-1I-x0M"/>
                         <segue destination="lH2-4M-I1F" kind="relationship" relationship="viewControllers" id="jLF-rD-tEn"/>
+                        <segue destination="gX2-C5-ZcX" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="h6X-pE-kRX" kind="relationship" relationship="viewControllers" id="peF-GG-IQp"/>
                     </connections>
                 </tabBarController>
