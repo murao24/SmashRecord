@@ -23,19 +23,19 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     ]
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         authUI.delegate = self
         authUI.providers = providers
         authButton.addTarget(self, action: #selector(self.authButtonPressed(sender:)), for: .touchUpInside)
-        
-    }
     
+    }
+
     @objc func authButtonPressed(sender: AnyObject) {
-        let authVC = self.authUI.authViewController()
-        self.present(authVC, animated: true, completion: nil)
+
+        let authViewController = self.authUI.authViewController()
+        self.present(authViewController, animated: true, completion: nil)
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {

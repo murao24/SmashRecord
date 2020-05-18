@@ -1046,7 +1046,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agx-GT-19f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5550.7246376811599" y="-7.3660714285714279"/>
+            <point key="canvasLocation" x="6461" y="-5"/>
         </scene>
         <!--Account-->
         <scene sceneID="1bW-P1-vKR">
@@ -1256,7 +1256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBK-Nh-7HF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3626" y="1031"/>
+            <point key="canvasLocation" x="3626" y="982"/>
         </scene>
         <!--Record Form View Controller-->
         <scene sceneID="ZQA-3h-KdM">
@@ -1425,7 +1425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gk-YR-dCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4599" y="460"/>
+            <point key="canvasLocation" x="4535" y="340"/>
         </scene>
         <!--Stage View Controller-->
         <scene sceneID="5rx-yt-yQV">
@@ -1525,12 +1525,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qqf-cI-Dzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5550.7246376811599" y="784.82142857142856"/>
+            <point key="canvasLocation" x="6461" y="818"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="24B-PB-lFj">
             <objects>
-                <viewController id="mcL-aU-r4p" customClass="LoginViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="mcL-aU-r4p" customClass="LoginViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="esy-Yd-8iX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1539,7 +1539,7 @@
                                 <rect key="frame" x="40" y="424" width="334" height="48"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="ログイン/新規登録">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -1560,7 +1560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pb0-qi-fRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495.6521739130435" y="14.732142857142856"/>
+            <point key="canvasLocation" x="145" y="901"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1603,12 +1603,46 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="mcL-aU-r4p" kind="relationship" relationship="rootViewController" id="UDz-IB-M4b"/>
+                        <segue destination="ilR-yl-G53" kind="relationship" relationship="rootViewController" id="Mfv-WO-JKE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hC0-VG-8Vy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523" y="15"/>
+            <point key="canvasLocation" x="-2100" y="15"/>
+        </scene>
+        <!--App Container View Controller-->
+        <scene sceneID="bRg-nd-JAq">
+            <objects>
+                <viewController id="ilR-yl-G53" customClass="AppContainerViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Djr-HA-tge" customClass="AppContainerViewcontroller">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XFx-Sd-JzV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n2E-PS-2ht"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlf-lk-4fK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1075" y="15"/>
+        </scene>
+        <!--Relaying View Controller-->
+        <scene sceneID="lRT-V6-NA8">
+            <objects>
+                <viewController storyboardIdentifier="MainViewContoller" id="cvK-dt-KPG" customClass="RelayingViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k1y-mP-I5w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aD7-xJ-VOS"/>
+                    </view>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="LRi-Up-ZZZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fb2-hQ-ARi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="15"/>
         </scene>
         <!--Note-->
         <scene sceneID="bVd-b5-zul">
@@ -1640,7 +1674,7 @@
         <!--Record-->
         <scene sceneID="1JM-xG-YSK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QV3-td-bL6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="QV3-td-bL6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Record" image="battle-icon" id="GqV-Xa-6Wc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WJB-cu-iCv">
@@ -1683,7 +1717,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ed5-1T-HT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2715.9420289855075" y="1030.5803571428571"/>
+            <point key="canvasLocation" x="2716" y="983"/>
         </scene>
         <!--Account-->
         <scene sceneID="1Dw-O2-mH1">
@@ -1711,6 +1745,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="LRi-Up-ZZZ"/>
         <segue reference="nMZ-nv-FUV"/>
     </inferredMetricsTieBreakers>
     <resources>
