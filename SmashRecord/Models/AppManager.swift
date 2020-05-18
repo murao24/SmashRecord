@@ -24,9 +24,10 @@ class AppManager {
         
         if Auth.auth().currentUser == nil {
             viewController = storyBoard.instantiateViewController(identifier: "LoginViewController")
-            
+            viewController.modalPresentationStyle = .fullScreen
         } else {
             viewController = storyBoard.instantiateViewController(identifier: "MainViewContoller")
+            viewController.modalPresentationStyle = .fullScreen
         }
         
         appContainer.present(viewController, animated: true, completion: nil)
@@ -35,7 +36,6 @@ class AppManager {
     
     func logout(){
         try! Auth.auth().signOut()
-        appContainer.presentedViewController?.dismiss(animated: true, completion: nil)
     }
     
     
