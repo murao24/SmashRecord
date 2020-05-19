@@ -311,7 +311,7 @@
         <!--Fighter Image View Controller-->
         <scene sceneID="4EH-qJ-YT2">
             <objects>
-                <viewController id="F42-Bc-ooW" customClass="FighterImageViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FIghterImageViewController" id="F42-Bc-ooW" customClass="FighterImageViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GAM-Rj-Tzl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -963,6 +963,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zL0-NN-5iP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="itE-Jn-TYm"/>
                     <connections>
                         <outletCollection property="fighterViews" destination="YcX-gf-mfW" collectionClass="NSMutableArray" id="Hrw-Q3-k3y"/>
                         <outletCollection property="fighterViews" destination="U4Z-Ed-rt3" collectionClass="NSMutableArray" id="gY5-Vf-pe0"/>
@@ -1046,19 +1047,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agx-GT-19f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7371.0144927536239" y="-5.3571428571428568"/>
+            <point key="canvasLocation" x="6606" y="136"/>
         </scene>
         <!--Account-->
         <scene sceneID="1bW-P1-vKR">
             <objects>
-                <viewController id="XAw-Qj-cXS" customClass="AccountViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="XAw-Qj-cXS" customClass="AccountViewController" customModule="SmashRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E2N-ac-lWA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-KN-dzQ">
-                                <rect key="frame" x="183" y="433" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
+                                <rect key="frame" x="40" y="723" width="334" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="87b-r5-D60"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="ログアウト">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="logoutPressed:" destination="XAw-Qj-cXS" eventType="touchUpInside" id="Kcu-SL-yM8"/>
                                 </connections>
@@ -1066,8 +1074,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xy3-KN-dzQ" firstAttribute="centerX" secondItem="E2N-ac-lWA" secondAttribute="centerX" id="Iqj-xA-z66"/>
-                            <constraint firstItem="xy3-KN-dzQ" firstAttribute="centerY" secondItem="E2N-ac-lWA" secondAttribute="centerY" id="h3O-gn-oZg"/>
+                            <constraint firstItem="o7t-9b-6Ke" firstAttribute="bottom" secondItem="xy3-KN-dzQ" secondAttribute="bottom" constant="40" id="2ip-qV-6Ld"/>
+                            <constraint firstItem="o7t-9b-6Ke" firstAttribute="trailing" secondItem="xy3-KN-dzQ" secondAttribute="trailing" constant="40" id="GC4-hR-Y8v"/>
+                            <constraint firstItem="xy3-KN-dzQ" firstAttribute="leading" secondItem="o7t-9b-6Ke" secondAttribute="leading" constant="40" id="xFf-p9-h8g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o7t-9b-6Ke"/>
                     </view>
@@ -1075,7 +1084,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AR-D0-VBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3626.0869565217395" y="1875.6696428571427"/>
+            <point key="canvasLocation" x="3626" y="1796"/>
         </scene>
         <!--Analyze-->
         <scene sceneID="hD4-al-t33">
@@ -1438,7 +1447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gk-YR-dCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6355.072463768116" y="339.50892857142856"/>
+            <point key="canvasLocation" x="5509" y="409"/>
         </scene>
         <!--Stage View Controller-->
         <scene sceneID="5rx-yt-yQV">
@@ -1538,7 +1547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qqf-cI-Dzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7371.0144927536239" y="817.63392857142856"/>
+            <point key="canvasLocation" x="6606" y="924"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="24B-PB-lFj">
@@ -1755,11 +1764,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJQ-jA-9Qv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2715.9420289855075" y="1875.6696428571427"/>
+            <point key="canvasLocation" x="2716" y="1796"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LRi-Up-ZZZ"/>
+        <segue reference="D1p-Um-FLN"/>
         <segue reference="nMZ-nv-FUV"/>
     </inferredMetricsTieBreakers>
     <resources>
