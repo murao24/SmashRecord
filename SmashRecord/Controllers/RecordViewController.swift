@@ -75,7 +75,7 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
             }
             cell.myFighterView.image = UIImage(named: record.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 10))
             cell.opponentFighterView.image = UIImage(named: record.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 0))
-            cell.stageView.image = UIImage(named: record.stage)
+            cell.stageView.image = UIImage(named: record.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -5))
         }
         
         return cell

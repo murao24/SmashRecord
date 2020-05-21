@@ -193,7 +193,6 @@
 				04373EFC245CF59000583C58 /* Frameworks */,
 				04373EFD245CF59000583C58 /* Resources */,
 				55583A60FFDF9342E70A808F /* [CP] Embed Pods Frameworks */,
-				69A8A200B8CD4739C171D437 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,23 +266,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmashRecord/Pods-SmashRecord-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		69A8A200B8CD4739C171D437 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmashRecord/Pods-SmashRecord-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmashRecord/Pods-SmashRecord-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmashRecord/Pods-SmashRecord-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		90D1042CB8CC6B04DCC7C4C3 /* [CP] Check Pods Manifest.lock */ = {

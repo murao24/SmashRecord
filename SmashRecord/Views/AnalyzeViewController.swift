@@ -33,12 +33,12 @@ class AnalyzeViewController: UIViewController {
     @IBOutlet weak var sortByWinRateLabel: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 50
         
         sortByFighterLabel.titleLabel?.adjustsFontSizeToFitWidth = true
         
