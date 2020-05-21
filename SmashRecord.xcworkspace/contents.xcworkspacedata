@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/muraoyoshinobu/Documents/swift/SmashRecord/SmashRecord/Controllers/AnalyzeStageViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:SmashRecord.xcodeproj">
    </FileRef>
    <FileRef

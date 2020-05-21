@@ -18,15 +18,15 @@ class PageViewController: UIPageViewController {
     }
     
     func getFirst() -> AnalyzeViewController {
-        return storyboard!.instantiateViewController(identifier: "FirstViewController") as! AnalyzeViewController
+        return storyboard!.instantiateViewController(identifier: "MyViewController") as! AnalyzeViewController
     }
     
-    func getSecond() -> SecondViewController {
-        return storyboard!.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
+    func getSecond() -> AnalyzeOpponentViewController {
+        return storyboard!.instantiateViewController(identifier: "OpponentViewController") as! AnalyzeOpponentViewController
     }
     
-    func getThird() -> ThirdViewController {
-        return storyboard!.instantiateViewController(identifier: "ThirdViewController") as! ThirdViewController
+    func getThird() -> AnalyzeStageViewController {
+        return storyboard!.instantiateViewController(identifier: "StagetViewController") as! AnalyzeStageViewController
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,9 +38,9 @@ class PageViewController: UIPageViewController {
 extension PageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
          
-        if viewController.isKind(of: ThirdViewController.self) {
+        if viewController.isKind(of: AnalyzeStageViewController.self) {
             return getSecond()
-        } else if viewController.isKind(of: SecondViewController.self) {
+        } else if viewController.isKind(of: AnalyzeOpponentViewController.self) {
             return getFirst()
         } else {
             return nil
@@ -50,9 +50,9 @@ extension PageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        if viewController.isKind(of: AnalyzeViewController.self) {
+        if viewController.isKind(of: AnalyzeMyFighterViewController.self) {
             return getSecond()
-        } else if viewController.isKind(of: SecondViewController.self) {
+        } else if viewController.isKind(of: AnalyzeOpponentViewController.self) {
             return getThird()
         } else {
             return nil
