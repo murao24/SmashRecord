@@ -6,8 +6,6 @@ target 'SmashRecord' do
   use_frameworks!
 
   # Pods for SmashRecord
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
   pod 'RealmSwift'
   pod 'SnapKit', '~> 5.0.0'
 end
