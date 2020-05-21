@@ -23,6 +23,7 @@ class RecordViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         stageLabel.adjustsFontSizeToFitWidth = true
+        tableView.rowHeight = 50
         loadRecords()
     }
     
@@ -72,8 +73,8 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.resultLabel.text = "負け"
                 cell.addBorder(width: 10, color: .systemBlue, position: .left)
             }
-            cell.myFighterView.image = UIImage(named: record.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 0))
-            cell.opponentFighterView.image = UIImage(named: record.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+            cell.myFighterView.image = UIImage(named: record.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 10))
+            cell.opponentFighterView.image = UIImage(named: record.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 0))
             cell.stageView.image = UIImage(named: record.stage)
         }
         

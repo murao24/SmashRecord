@@ -16,13 +16,6 @@ class AccountViewController: UIViewController {
     }
     
     
-    @IBAction func logoutPressed(_ sender: UIButton) {
-        AppManager.shared.logout()
-        
-        let loginViewController = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
-        loginViewController.modalPresentationStyle = .fullScreen
-        self.present(loginViewController, animated: true, completion: nil)
 
-    }
     
 }

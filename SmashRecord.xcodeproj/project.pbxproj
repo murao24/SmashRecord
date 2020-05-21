@@ -19,8 +19,6 @@
 		04373F0C245CF59000583C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04373F0A245CF59000583C58 /* Main.storyboard */; };
 		04373F0E245CF59100583C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04373F0D245CF59100583C58 /* Assets.xcassets */; };
 		04373F11245CF59100583C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04373F0F245CF59100583C58 /* LaunchScreen.storyboard */; };
-		04373F1B245CFE7600583C58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1A245CFE7600583C58 /* LoginViewController.swift */; };
-		04373F1D245CFE8100583C58 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1C245CFE8100583C58 /* RegisterViewController.swift */; };
 		04373F1F245CFE9200583C58 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1E245CFE9200583C58 /* AccountViewController.swift */; };
 		04373F21245CFF2500583C58 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F20245CFF2500583C58 /* UIView+AddBorder.swift */; };
 		046BBDEF245D5F1D00B8A8E9 /* FighterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDEE245D5F1D00B8A8E9 /* FighterTableViewCell.swift */; };
@@ -37,9 +35,6 @@
 		04CD59CA245D364A00976595 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD59C9245D364A00976595 /* AlertController.swift */; };
 		04CD59D0245D513700976595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CD59CF245D513700976595 /* GoogleService-Info.plist */; };
 		04E166C6246CE977008D1355 /* AnalyzeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E166C5246CE977008D1355 /* AnalyzeTableViewCell.swift */; };
-		04E97E082472610700D09B75 /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E97E072472610700D09B75 /* AppContainerViewController.swift */; };
-		04E97E0A2472612E00D09B75 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E97E092472612E00D09B75 /* AppManager.swift */; };
-		04E97E0E24727A4400D09B75 /* RelayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E97E0D24727A4400D09B75 /* RelayingViewController.swift */; };
 		22E7861BF4581CA2468228A6 /* Pods_SmashRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +53,6 @@
 		04373F0D245CF59100583C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04373F10245CF59100583C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04373F12245CF59100583C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04373F1A245CFE7600583C58 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		04373F1C245CFE8100583C58 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		04373F1E245CFE9200583C58 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		04373F20245CFF2500583C58 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddBorder.swift"; sourceTree = "<group>"; };
 		046BBDEE245D5F1D00B8A8E9 /* FighterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,9 +69,6 @@
 		04CD59C9245D364A00976595 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		04CD59CF245D513700976595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04E166C5246CE977008D1355 /* AnalyzeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		04E97E072472610700D09B75 /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
-		04E97E092472612E00D09B75 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
-		04E97E0D24727A4400D09B75 /* RelayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayingViewController.swift; sourceTree = "<group>"; };
 		6C1E412AE192155123028D42 /* Pods_SmashRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DC6CE520A54C70BF7CAB49 /* Pods-SmashRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecord.release.xcconfig"; path = "Target Support Files/Pods-SmashRecord/Pods-SmashRecord.release.xcconfig"; sourceTree = "<group>"; };
 		CFB36A46B522D35AC105B54C /* Pods-SmashRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecord.debug.xcconfig"; path = "Target Support Files/Pods-SmashRecord/Pods-SmashRecord.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,8 +123,6 @@
 		04373F18245CFE4500583C58 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04373F1A245CFE7600583C58 /* LoginViewController.swift */,
-				04373F1C245CFE8100583C58 /* RegisterViewController.swift */,
 				04373F06245CF59000583C58 /* NoteViewController.swift */,
 				046BBDF7245E8E8E00B8A8E9 /* FighterNoteViewController.swift */,
 				046BBE01246384AF00B8A8E9 /* ContainerViewController.swift */,
@@ -154,8 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				04373F0A245CF59000583C58 /* Main.storyboard */,
-				04E97E0D24727A4400D09B75 /* RelayingViewController.swift */,
-				04E97E072472610700D09B75 /* AppContainerViewController.swift */,
 				046BBDEE245D5F1D00B8A8E9 /* FighterTableViewCell.swift */,
 				046BBE052463989E00B8A8E9 /* RecordTableViewCell.swift */,
 				04E166C5246CE977008D1355 /* AnalyzeTableViewCell.swift */,
@@ -168,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				046BBDFD245F972800B8A8E9 /* Constants.swift */,
-				04E97E092472612E00D09B75 /* AppManager.swift */,
 				046BBDF5245E51E100B8A8E9 /* Fighter.swift */,
 				046BBDF9245E9B5500B8A8E9 /* FighterNote.swift */,
 				046BBDFF2463819600B8A8E9 /* Record.swift */,
@@ -337,8 +322,6 @@
 				0423EFE9246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift in Sources */,
 				04E166C6246CE977008D1355 /* AnalyzeTableViewCell.swift in Sources */,
 				046BBDF8245E8E8E00B8A8E9 /* FighterNoteViewController.swift in Sources */,
-				04E97E0A2472612E00D09B75 /* AppManager.swift in Sources */,
-				04E97E0E24727A4400D09B75 /* RelayingViewController.swift in Sources */,
 				04CD59CA245D364A00976595 /* AlertController.swift in Sources */,
 				0493AE28246E51AA004871E0 /* AnalyzeByStage.swift in Sources */,
 				04373F07245CF59000583C58 /* NoteViewController.swift in Sources */,
@@ -351,14 +334,11 @@
 				046BBE02246384AF00B8A8E9 /* ContainerViewController.swift in Sources */,
 				040B3813246BB4BC0033DBA7 /* AnalyzeViewController.swift in Sources */,
 				048CCE9F2463F54C00B4C400 /* FighterImageViewController.swift in Sources */,
-				04373F1D245CFE8100583C58 /* RegisterViewController.swift in Sources */,
-				04373F1B245CFE7600583C58 /* LoginViewController.swift in Sources */,
 				046BBDFE245F972800B8A8E9 /* Constants.swift in Sources */,
 				042EF406246E16F8008131FA /* AnalyzeByFighter.swift in Sources */,
 				04373F05245CF59000583C58 /* SceneDelegate.swift in Sources */,
 				046BBDFA245E9B5500B8A8E9 /* FighterNote.swift in Sources */,
 				040B3815246BBD420033DBA7 /* SwitchButtonController.swift in Sources */,
-				04E97E082472610700D09B75 /* AppContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
