@@ -47,7 +47,7 @@
 		040B3812246BB4BC0033DBA7 /* AnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnalyzeViewController.swift; path = SmashRecord/Views/AnalyzeViewController.swift; sourceTree = SOURCE_ROOT; };
 		040B3814246BBD420033DBA7 /* SwitchButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButtonController.swift; sourceTree = "<group>"; };
 		0423EFE8246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeByOpponentFighter.swift; sourceTree = "<group>"; };
-		04278F3A24764053008B829D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = SOURCE_ROOT; };
+		04278F3A24764053008B829D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = SmashRecord/Controllers/PageViewController.swift; sourceTree = SOURCE_ROOT; };
 		04278F4024764AF7008B829D /* AnalyzeMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeMyViewController.swift; sourceTree = "<group>"; };
 		04278F4224764B55008B829D /* AnalyzeOpponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeOpponentViewController.swift; sourceTree = "<group>"; };
 		04278F4424764B84008B829D /* AnalyzeStageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnalyzeStageViewController.swift; path = /Users/muraoyoshinobu/Documents/swift/SmashRecord/SmashRecord/Controllers/AnalyzeStageViewController.swift; sourceTree = "<absolute>"; };
@@ -138,6 +138,7 @@
 				048CCE9C2463F53600B4C400 /* RecordFormViewController.swift */,
 				048CCE9E2463F54C00B4C400 /* FighterImageViewController.swift */,
 				040B3810246936930033DBA7 /* StageViewController.swift */,
+				04278F3A24764053008B829D /* PageViewController.swift */,
 				040B3812246BB4BC0033DBA7 /* AnalyzeViewController.swift */,
 				04278F4024764AF7008B829D /* AnalyzeMyViewController.swift */,
 				04278F4224764B55008B829D /* AnalyzeOpponentViewController.swift */,
@@ -155,7 +156,6 @@
 				04373F0A245CF59000583C58 /* Main.storyboard */,
 				046BBDEE245D5F1D00B8A8E9 /* FighterTableViewCell.swift */,
 				046BBE052463989E00B8A8E9 /* RecordTableViewCell.swift */,
-				04278F3A24764053008B829D /* PageViewController.swift */,
 				04E166C5246CE977008D1355 /* AnalyzeTableViewCell.swift */,
 				04373F20245CFF2500583C58 /* UIView+AddBorder.swift */,
 			);

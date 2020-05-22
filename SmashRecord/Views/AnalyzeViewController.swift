@@ -18,6 +18,7 @@ class AnalyzeViewController: UIViewController {
     var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
     var analyzeByStages: Results<AnalyzeByStage>?
     
+    
     // 一番上
     @IBOutlet weak var myFighterLabel: UIButton!
     @IBOutlet weak var versusOpponentLabel: UIButton!
@@ -35,28 +36,12 @@ class AnalyzeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.rowHeight = 50
-        
-        sortByFighterLabel.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        // button is selected
-        onButton(button: myFighterLabel)
-        onButton(button: sortByFighterLabel)
-        
-        // tableView
-        loadRecord(sortedBy: "fighterID", ascending: true)
-        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calculateRecord()
-        tableView.reloadData()
     }
-    
     
 
     @IBAction func myFighterPressed(_ sender: UIButton) {
@@ -64,7 +49,7 @@ class AnalyzeViewController: UIViewController {
         offButton(button: versusOpponentLabel)
         offButton(button: stageLabel)
         sortByFighterLabel.setTitle("自分", for: .normal)
-        tableView.reloadData()
+
     }
     
     @IBAction func opponentFighterPressed(_ sender: UIButton) {
@@ -72,7 +57,6 @@ class AnalyzeViewController: UIViewController {
         offButton(button: myFighterLabel)
         offButton(button: stageLabel)
         sortByFighterLabel.setTitle("相手", for: .normal)
-        tableView.reloadData()
     }
     
     @IBAction func stapePressed(_ sender: UIButton) {
@@ -81,7 +65,6 @@ class AnalyzeViewController: UIViewController {
         offButton(button: versusOpponentLabel)
         // ステージを選択時、キャラ->ステージ
         sortByFighterLabel.setTitle("ステージ", for: .normal)
-        tableView.reloadData()
     }
     
     
@@ -260,89 +243,3 @@ class AnalyzeViewController: UIViewController {
     
 }
 
-
-
-extension AnalyzeViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    // MARK: - TableView DataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if myFighterLabel.isSelected == true || versusOpponentLabel.isSelected {
-            return S.fightersArray.count
-        } else {
-            return S.stageArray.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
-        cell.winRateLabel.adjustsFontSizeToFitWidth = true
-        
-        
-        if myFighterLabel.isSelected == true {
-            if let analyzeByFighters = analyzeByFighters?[indexPath.row] {
-                
-                guard analyzeByFighters.gameCount != 0 else {
-                    cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                    cell.gameCountLabel.text = "-"
-                    cell.winCountLabel.text = "-"
-                    cell.loseCountLabel.text = "-"
-                    cell.winRateLabel.text = "-"
-                    return cell
-                }
-
-                cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                cell.gameCountLabel.text = "\(String(analyzeByFighters.gameCount))"
-                cell.winCountLabel.text = "\(String(analyzeByFighters.winCount))"
-                cell.loseCountLabel.text = "\(String(analyzeByFighters.loseCount))"
-                cell.winRateLabel.text = "\(String(analyzeByFighters.winRate))%"
-            }
-        } else if versusOpponentLabel.isSelected == true {
-            if let analyzeByOpponentFighters = analyzeByOpponentFighters?[indexPath.row] {
-                
-                guard analyzeByOpponentFighters.gameCount != 0 else {
-                    cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighters.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                    cell.gameCountLabel.text = "-"
-                    cell.winCountLabel.text = "-"
-                    cell.loseCountLabel.text = "-"
-                    cell.winRateLabel.text = "-"
-                    return cell
-                }
-
-                cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighters.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                cell.gameCountLabel.text = "\(String(analyzeByOpponentFighters.gameCount))"
-                cell.winCountLabel.text = "\(String(analyzeByOpponentFighters.winCount))"
-                cell.loseCountLabel.text = "\(String(analyzeByOpponentFighters.loseCount))"
-                cell.winRateLabel.text = "\(String(analyzeByOpponentFighters.winRate))%"
-            }
-        } else {
-            if let analyzeByStages = analyzeByStages?[indexPath.row] {
-                guard analyzeByStages.gameCount != 0 else {
-                    cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                    cell.gameCountLabel.text = "-"
-                    cell.winCountLabel.text = "-"
-                    cell.loseCountLabel.text = "-"
-                    cell.winRateLabel.text = "-"
-                    return cell
-                }
-                
-                cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                cell.gameCountLabel.text = "\(String(analyzeByStages.gameCount))"
-                cell.winCountLabel.text = "\(String(analyzeByStages.winCount))"
-                cell.loseCountLabel.text = "\(String(analyzeByStages.loseCount))"
-                cell.winRateLabel.text = "\(String(analyzeByStages.winRate))%"
-            }
-        }
-
-        
-        return cell
-    }
-    
-    // MARK: - Tableview Delegate Methods
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-
-}
