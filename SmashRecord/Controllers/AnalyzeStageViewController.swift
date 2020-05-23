@@ -15,6 +15,7 @@ class AnalyzeStageViewController: AnalyzeViewController {
         tableView.delegate = self
         tableView.rowHeight = 50
         
+        onButton(button: sortByFighterLabel)
         loadRecord(sortedBy: "fighterID", ascending: true)
     }
     
@@ -22,7 +23,6 @@ class AnalyzeStageViewController: AnalyzeViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
         
-        onButton(button: sortByFighterLabel)
         onButton(button: stageLabel)
         offButton(button: myFighterLabel)
         offButton(button: versusOpponentLabel)
