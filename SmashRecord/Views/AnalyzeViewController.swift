@@ -20,18 +20,13 @@ class AnalyzeViewController: UIViewController {
     
     
     // 一番上
-    @IBOutlet weak var myFighterLabel: UIButton!
-    @IBOutlet weak var versusOpponentLabel: UIButton!
-    @IBOutlet weak var stageLabel: UIButton!
+    @IBOutlet var changeRecord: [UIButton]!
     
     @IBOutlet weak var tableView: UITableView!
     
     // その下
-    @IBOutlet weak var sortByFighterLabel: UIButton!
-    @IBOutlet weak var sortByGameCountLabel: UIButton!
-    @IBOutlet weak var sortByWinCountLabel: UIButton!
-    @IBOutlet weak var sortByLoseCountLabel: UIButton!
-    @IBOutlet weak var sortByWinRateLabel: UIButton!
+    @IBOutlet var sortBy: [UIButton]!
+    
     
     
     override func viewDidLoad() {
@@ -45,67 +40,51 @@ class AnalyzeViewController: UIViewController {
     
 
     @IBAction func myFighterPressed(_ sender: UIButton) {
-        onButton(button: myFighterLabel)
-        offButton(button: versusOpponentLabel)
-        offButton(button: stageLabel)
-        sortByFighterLabel.setTitle("自分", for: .normal)
+        onButton(button: changeRecord[0])
+        offButton(button: changeRecord[1])
+        offButton(button: changeRecord[2])
+        sortBy[0].setTitle("自分", for: .normal)
 
     }
     
     @IBAction func opponentFighterPressed(_ sender: UIButton) {
-        onButton(button: versusOpponentLabel)
-        offButton(button: myFighterLabel)
-        offButton(button: stageLabel)
-        sortByFighterLabel.setTitle("相手", for: .normal)
+        onButton(button: changeRecord[1])
+        offButton(button: changeRecord[0])
+        offButton(button: changeRecord[2])
+        sortBy[0].setTitle("相手", for: .normal)
     }
     
     @IBAction func stapePressed(_ sender: UIButton) {
-        onButton(button: stageLabel)
-        offButton(button: myFighterLabel)
-        offButton(button: versusOpponentLabel)
+        onButton(button: changeRecord[2])
+        offButton(button: changeRecord[0])
+        offButton(button: changeRecord[1])
         // ステージを選択時、キャラ->ステージ
-        sortByFighterLabel.setTitle("ステージ", for: .normal)
+        sortBy[0].setTitle("ステージ", for: .normal)
     }
     
     
     // switch Button color
     @IBAction func sortButtonPressed(_ sender: UIButton) {
         
+        for i in 0...sortBy.count - 1 {
+            offButton(button: sortBy[i])
+        }
+        
         switch sender.tag {
         case 0:
-            onButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[0])
             loadRecord(sortedBy: "fighterID", ascending: true)
         case 1:
-            offButton(button: sortByFighterLabel)
-            onButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[1])
             loadRecord(sortedBy: "gameCount")
         case 2:
-            offButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            onButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[2])
             loadRecord(sortedBy: "winCount")
         case 3:
-            offButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            onButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[3])
             loadRecord(sortedBy: "loseCount")
         case 4:
-            offButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            onButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[4])
             loadRecord(sortedBy: "winRate")
         default:
             return

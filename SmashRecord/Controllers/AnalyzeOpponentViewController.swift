@@ -15,16 +15,16 @@ class AnalyzeOpponentViewController: AnalyzeViewController {
         tableView.delegate = self
         tableView.rowHeight = 50
         
-        onButton(button: sortByFighterLabel) 
+        onButton(button: sortBy[0])
         loadRecord(sortedBy: "fighterID", ascending: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        onButton(button: versusOpponentLabel)
-        offButton(button: myFighterLabel)
-        offButton(button: stageLabel)
+        onButton(button: changeRecord[1])
+        offButton(button: changeRecord[0])
+        offButton(button: changeRecord[2])
         tableView.reloadData()
     }
     
