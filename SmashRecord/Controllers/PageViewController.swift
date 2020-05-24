@@ -9,8 +9,6 @@
 import UIKit
 
 class PageViewController: UIPageViewController {
-    
-    var pageViewControllers: [UIViewController] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +16,7 @@ class PageViewController: UIPageViewController {
         self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
         self.delegate = self
-
-        let myPageView  = storyboard!.instantiateViewController(identifier: "MyViewController") as! AnalyzeMyFighterViewController
-        let opponentPageView = storyboard!.instantiateViewController(identifier: "OpponentViewController") as! AnalyzeOpponentViewController
-        let stagePageView = storyboard!.instantiateViewController(identifier: "StagetViewController") as! AnalyzeStageViewController
-        pageViewControllers = [myPageView, opponentPageView, stagePageView]
-
         
-
     }
     
     func getFirst() -> AnalyzeMyFighterViewController {
@@ -70,11 +61,6 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         }
         
     }
-    
- 
-    
-    
-
 
 }
 

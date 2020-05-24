@@ -18,13 +18,13 @@ class AnalyzeViewController: UIViewController {
     var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
     var analyzeByStages: Results<AnalyzeByStage>?
     
-    var changeVC: () -> Void = {}
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    private var pageViewController: UIPageViewController!
+    var viewControllers: [UIViewController] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +37,14 @@ class AnalyzeViewController: UIViewController {
         offButton(button: changeRecord[1])
         offButton(button: changeRecord[2])
         sortBy[0].setTitle("自分", for: .normal)
+        pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        let ownViewController = storyboard?.instantiateViewController(identifier: "MyViewController") as! AnalyzeMyFighterViewController
+        let opponentViewController = storyboard?.instantiateViewController(identifier: "OpponentViewController") as! AnalyzeOpponentViewController
+        let stageViewController = storyboard?.instantiateViewController(identifier: "StagetViewController") as! AnalyzeStageViewController
+        
+        viewControllers = [ownViewController, opponentViewController, stageViewController]
+        pageViewController.setViewControllers([viewControllers[0]], direction: .forward, animated: true, completion: nil)
+        
     }
     
     func opponentButtonPressed(changeRecord: [UIButton], sortBy: [UIButton]) {
@@ -210,4 +218,3 @@ class AnalyzeViewController: UIViewController {
     }
     
 }
-
