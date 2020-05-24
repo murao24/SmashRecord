@@ -18,111 +18,74 @@ class AnalyzeViewController: UIViewController {
     var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
     var analyzeByStages: Results<AnalyzeByStage>?
     
+    var changeVC: () -> Void = {}
+
     // 一番上
-    @IBOutlet weak var myFighterLabel: UIButton!
-    @IBOutlet weak var versusOpponentLabel: UIButton!
-    @IBOutlet weak var stageLabel: UIButton!
+    @IBOutlet var changeRecord: [UIButton]!
     
     @IBOutlet weak var tableView: UITableView!
     
     // その下
-    @IBOutlet weak var sortByFighterLabel: UIButton!
-    @IBOutlet weak var sortByGameCountLabel: UIButton!
-    @IBOutlet weak var sortByWinCountLabel: UIButton!
-    @IBOutlet weak var sortByLoseCountLabel: UIButton!
-    @IBOutlet weak var sortByWinRateLabel: UIButton!
+    @IBOutlet var sortBy: [UIButton]!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.dataSource = self
-        tableView.delegate = self
         
-        sortByFighterLabel.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        // button is selected
-        onButton(button: myFighterLabel)
-        onButton(button: sortByFighterLabel)
-        
-        // tableView
-        loadRecord(sortedBy: "fighterID", ascending: true)
-        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calculateRecord()
-        tableView.reloadData()
     }
-    
     
 
     @IBAction func myFighterPressed(_ sender: UIButton) {
-        onButton(button: myFighterLabel)
-        offButton(button: versusOpponentLabel)
-        offButton(button: stageLabel)
-        sortByFighterLabel.setTitle("自分", for: .normal)
-        tableView.reloadData()
+        onButton(button: changeRecord[0])
+        offButton(button: changeRecord[1])
+        offButton(button: changeRecord[2])
+        sortBy[0].setTitle("自分", for: .normal)
     }
     
     @IBAction func opponentFighterPressed(_ sender: UIButton) {
-        onButton(button: versusOpponentLabel)
-        offButton(button: myFighterLabel)
-        offButton(button: stageLabel)
-        sortByFighterLabel.setTitle("相手", for: .normal)
-        tableView.reloadData()
+        onButton(button: changeRecord[1])
+        offButton(button: changeRecord[0])
+        offButton(button: changeRecord[2])
+        sortBy[0].setTitle("相手", for: .normal)
     }
     
     @IBAction func stapePressed(_ sender: UIButton) {
-        onButton(button: stageLabel)
-        offButton(button: myFighterLabel)
-        offButton(button: versusOpponentLabel)
+        onButton(button: changeRecord[2])
+        offButton(button: changeRecord[0])
+        offButton(button: changeRecord[1])
         // ステージを選択時、キャラ->ステージ
-        sortByFighterLabel.setTitle("ステージ", for: .normal)
-        tableView.reloadData()
+        sortBy[0].setTitle("ステージ", for: .normal)
     }
     
     
     // switch Button color
     @IBAction func sortButtonPressed(_ sender: UIButton) {
         
+        for i in 0...sortBy.count - 1 {
+            offButton(button: sortBy[i])
+        }
+        
         switch sender.tag {
         case 0:
-            onButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[0])
             loadRecord(sortedBy: "fighterID", ascending: true)
         case 1:
-            offButton(button: sortByFighterLabel)
-            onButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[1])
             loadRecord(sortedBy: "gameCount")
         case 2:
-            offButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            onButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[2])
             loadRecord(sortedBy: "winCount")
         case 3:
-            offButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            onButton(button: sortByLoseCountLabel)
-            offButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[3])
             loadRecord(sortedBy: "loseCount")
         case 4:
-            offButton(button: sortByFighterLabel)
-            offButton(button: sortByGameCountLabel)
-            offButton(button: sortByWinCountLabel)
-            offButton(button: sortByLoseCountLabel)
-            onButton(button: sortByWinRateLabel)
+            onButton(button: sortBy[4])
             loadRecord(sortedBy: "winRate")
         default:
             return
@@ -260,89 +223,3 @@ class AnalyzeViewController: UIViewController {
     
 }
 
-
-
-extension AnalyzeViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    // MARK: - TableView DataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if myFighterLabel.isSelected == true || versusOpponentLabel.isSelected {
-            return S.fightersArray.count
-        } else {
-            return S.stageArray.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
-        cell.winRateLabel.adjustsFontSizeToFitWidth = true
-        
-        
-        if myFighterLabel.isSelected == true {
-            if let analyzeByFighters = analyzeByFighters?[indexPath.row] {
-                
-                guard analyzeByFighters.gameCount != 0 else {
-                    cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                    cell.gameCountLabel.text = "-"
-                    cell.winCountLabel.text = "-"
-                    cell.loseCountLabel.text = "-"
-                    cell.winRateLabel.text = "-"
-                    return cell
-                }
-
-                cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                cell.gameCountLabel.text = "\(String(analyzeByFighters.gameCount))"
-                cell.winCountLabel.text = "\(String(analyzeByFighters.winCount))"
-                cell.loseCountLabel.text = "\(String(analyzeByFighters.loseCount))"
-                cell.winRateLabel.text = "\(String(analyzeByFighters.winRate))%"
-            }
-        } else if versusOpponentLabel.isSelected == true {
-            if let analyzeByOpponentFighters = analyzeByOpponentFighters?[indexPath.row] {
-                
-                guard analyzeByOpponentFighters.gameCount != 0 else {
-                    cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighters.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                    cell.gameCountLabel.text = "-"
-                    cell.winCountLabel.text = "-"
-                    cell.loseCountLabel.text = "-"
-                    cell.winRateLabel.text = "-"
-                    return cell
-                }
-
-                cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighters.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                cell.gameCountLabel.text = "\(String(analyzeByOpponentFighters.gameCount))"
-                cell.winCountLabel.text = "\(String(analyzeByOpponentFighters.winCount))"
-                cell.loseCountLabel.text = "\(String(analyzeByOpponentFighters.loseCount))"
-                cell.winRateLabel.text = "\(String(analyzeByOpponentFighters.winRate))%"
-            }
-        } else {
-            if let analyzeByStages = analyzeByStages?[indexPath.row] {
-                guard analyzeByStages.gameCount != 0 else {
-                    cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                    cell.gameCountLabel.text = "-"
-                    cell.winCountLabel.text = "-"
-                    cell.loseCountLabel.text = "-"
-                    cell.winRateLabel.text = "-"
-                    return cell
-                }
-                
-                cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
-                cell.gameCountLabel.text = "\(String(analyzeByStages.gameCount))"
-                cell.winCountLabel.text = "\(String(analyzeByStages.winCount))"
-                cell.loseCountLabel.text = "\(String(analyzeByStages.loseCount))"
-                cell.winRateLabel.text = "\(String(analyzeByStages.winRate))%"
-            }
-        }
-
-        
-        return cell
-    }
-    
-    // MARK: - Tableview Delegate Methods
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-
-}

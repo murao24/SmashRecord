@@ -21,6 +21,7 @@ class NoteViewController: UIViewController {
         super.viewDidLoad()
         saveFighter()
         tableView.reloadData()
+        tableView.rowHeight = 70
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
     }
@@ -45,7 +46,7 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FighterTableViewCell
         cell.fighterName.text = S.fightersArray[indexPath.row][0]
-        cell.fighterView.image = UIImage(named: S.fightersArray[indexPath.row][1])
+        cell.fighterView.image = UIImage(named: S.fightersArray[indexPath.row][1])?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 50))
         
         return cell
     }

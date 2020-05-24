@@ -6,7 +6,7 @@
 //  Copyright © 2020 村尾慶伸. All rights reserved.
 //
 
-import  UIKit
+import UIKit
 
 extension UIViewController {
     
