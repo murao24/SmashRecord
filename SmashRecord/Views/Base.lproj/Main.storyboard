@@ -1058,7 +1058,7 @@
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="myFighterPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="N6u-aS-aNL"/>
+                                            <action selector="ownButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="84G-nh-G1e"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-60-cSz">
@@ -1068,8 +1068,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="myFighterPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="6vR-LG-bjl"/>
-                                            <action selector="opponentFighterPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="77G-on-kDV"/>
+                                            <action selector="opponentButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="9ya-Fu-bhc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf8-c4-OaI">
@@ -1078,7 +1077,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="stapePressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="iyb-7x-ZZ6"/>
+                                            <action selector="stageButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="hIb-cX-3Eu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1093,7 +1092,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="R4J-S0-w4h"/>
+                                            <action selector="switchSortButton:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="fvB-jm-H7O"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtG-m5-mUf">
@@ -1102,7 +1101,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="MEM-Lm-bxX"/>
+                                            <action selector="switchSortButton:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="drw-jR-Unv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXN-ps-nk6">
@@ -1111,7 +1110,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="Lam-eB-7nt"/>
+                                            <action selector="switchSortButton:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="w34-CP-6yL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQb-zz-XVx">
@@ -1120,7 +1119,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="iqu-Bk-3jO"/>
+                                            <action selector="switchSortButton:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="ZaS-Sm-0f5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvT-mS-jIB">
@@ -1129,7 +1128,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="fFp-zr-1YB"/>
+                                            <action selector="switchSortButton:" destination="hXD-Nb-A4S" eventType="touchUpInside" id="q9a-XK-Mah"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1217,14 +1216,14 @@
                     <navigationItem key="navigationItem" title="Analyze" id="qlk-Xt-Jr1"/>
                     <connections>
                         <outlet property="tableView" destination="PNi-OV-RNn" id="ZtL-Qg-ts2"/>
-                        <outletCollection property="changeRecord" destination="b4Q-qq-hVI" collectionClass="NSMutableArray" id="AUZ-UC-KO4"/>
-                        <outletCollection property="changeRecord" destination="XAK-60-cSz" collectionClass="NSMutableArray" id="WA8-hn-sGl"/>
-                        <outletCollection property="changeRecord" destination="yf8-c4-OaI" collectionClass="NSMutableArray" id="Aqf-mb-xyt"/>
-                        <outletCollection property="sortBy" destination="rX3-AC-fRP" collectionClass="NSMutableArray" id="rjV-ft-ogH"/>
-                        <outletCollection property="sortBy" destination="RtG-m5-mUf" collectionClass="NSMutableArray" id="Wiw-Yf-xrB"/>
-                        <outletCollection property="sortBy" destination="OXN-ps-nk6" collectionClass="NSMutableArray" id="4I8-aQ-xcs"/>
-                        <outletCollection property="sortBy" destination="nQb-zz-XVx" collectionClass="NSMutableArray" id="ChW-qw-Pkc"/>
-                        <outletCollection property="sortBy" destination="RvT-mS-jIB" collectionClass="NSMutableArray" id="U9Y-go-Kh4"/>
+                        <outletCollection property="changeRecord" destination="b4Q-qq-hVI" collectionClass="NSMutableArray" id="WkO-E0-WaA"/>
+                        <outletCollection property="changeRecord" destination="XAK-60-cSz" collectionClass="NSMutableArray" id="UDh-pm-RE1"/>
+                        <outletCollection property="changeRecord" destination="yf8-c4-OaI" collectionClass="NSMutableArray" id="ttm-L7-nfg"/>
+                        <outletCollection property="sortBy" destination="rX3-AC-fRP" collectionClass="NSMutableArray" id="i17-o2-dIu"/>
+                        <outletCollection property="sortBy" destination="RtG-m5-mUf" collectionClass="NSMutableArray" id="Yp1-SD-hTl"/>
+                        <outletCollection property="sortBy" destination="OXN-ps-nk6" collectionClass="NSMutableArray" id="tjO-HC-AEt"/>
+                        <outletCollection property="sortBy" destination="nQb-zz-XVx" collectionClass="NSMutableArray" id="HX2-yK-Tg6"/>
+                        <outletCollection property="sortBy" destination="RvT-mS-jIB" collectionClass="NSMutableArray" id="j0j-fC-ARk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBK-Nh-7HF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1671,38 +1670,38 @@
                                 <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="rwr-PK-tEv" customClass="AnalyzeTableViewCell" customModule="SmashRecord" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwr-PK-tEv" id="04m-Aw-Z1M">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="Wv5-3O-Vj4">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="59.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="60"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KuL-ih-EGw">
-                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="59.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="60"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKf-NJ-Kpa">
-                                                            <rect key="frame" x="82" y="0.0" width="46" height="59.5"/>
+                                                            <rect key="frame" x="82" y="0.0" width="46" height="60"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6o-wU-6Uc">
-                                                            <rect key="frame" x="164" y="0.0" width="46" height="59.5"/>
+                                                            <rect key="frame" x="164" y="0.0" width="46" height="60"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeS-gh-XBo">
-                                                            <rect key="frame" x="246" y="0.0" width="46" height="59.5"/>
+                                                            <rect key="frame" x="246" y="0.0" width="46" height="60"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeV-gs-9Xq">
-                                                            <rect key="frame" x="328" y="0.0" width="46" height="59.5"/>
+                                                            <rect key="frame" x="328" y="0.0" width="46" height="60"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1738,7 +1737,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="myFighterPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="aEz-XH-R3O"/>
+                                            <action selector="ownButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="PnF-mD-HQh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxM-eH-yfN">
@@ -1748,8 +1747,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="myFighterPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="e3Z-NC-Fln"/>
-                                            <action selector="opponentFighterPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="cEE-fF-NoF"/>
+                                            <action selector="opponentButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="7IS-sG-R2a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-iX-8VC">
@@ -1758,7 +1756,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="stapePressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="cXp-25-pXQ"/>
+                                            <action selector="stageButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="vxx-kn-tdL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1773,7 +1771,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="N1o-dH-rCT"/>
+                                            <action selector="switchSortButton:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="0Fc-gW-HQR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2D-Jb-er6">
@@ -1782,7 +1780,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="Jm7-Uw-uZZ"/>
+                                            <action selector="switchSortButton:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="wbb-Gn-TwI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfy-Bb-jYt">
@@ -1791,7 +1789,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="mTa-WE-pNV"/>
+                                            <action selector="switchSortButton:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="AlA-o4-UN4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTw-fc-0kk">
@@ -1800,7 +1798,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="yB8-Ug-3QD"/>
+                                            <action selector="switchSortButton:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="U1N-6s-U48"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXB-9d-Ysx">
@@ -1809,7 +1807,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="XCK-Zu-Z43"/>
+                                            <action selector="switchSortButton:" destination="kgu-Sm-lL1" eventType="touchUpInside" id="HPD-2k-YVw"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1834,14 +1832,14 @@
                     <navigationItem key="navigationItem" title="Analyze" id="fKI-Dr-2YM"/>
                     <connections>
                         <outlet property="tableView" destination="ZZr-LK-AjV" id="0eR-AN-Cfy"/>
-                        <outletCollection property="changeRecord" destination="te9-qD-2eM" collectionClass="NSMutableArray" id="bZv-8I-DsM"/>
-                        <outletCollection property="changeRecord" destination="sxM-eH-yfN" collectionClass="NSMutableArray" id="CiW-uM-gr9"/>
-                        <outletCollection property="changeRecord" destination="3aH-iX-8VC" collectionClass="NSMutableArray" id="B5I-Bw-gXk"/>
-                        <outletCollection property="sortBy" destination="aXS-7E-fCf" collectionClass="NSMutableArray" id="NgH-qO-d1E"/>
-                        <outletCollection property="sortBy" destination="F2D-Jb-er6" collectionClass="NSMutableArray" id="oXg-3a-XFD"/>
-                        <outletCollection property="sortBy" destination="Cfy-Bb-jYt" collectionClass="NSMutableArray" id="ZbW-en-Fcf"/>
-                        <outletCollection property="sortBy" destination="GTw-fc-0kk" collectionClass="NSMutableArray" id="Fb6-Sb-w8p"/>
-                        <outletCollection property="sortBy" destination="aXB-9d-Ysx" collectionClass="NSMutableArray" id="ggD-Lx-Rq3"/>
+                        <outletCollection property="changeRecord" destination="te9-qD-2eM" collectionClass="NSMutableArray" id="b7c-zG-Nps"/>
+                        <outletCollection property="changeRecord" destination="sxM-eH-yfN" collectionClass="NSMutableArray" id="oid-VN-T6r"/>
+                        <outletCollection property="changeRecord" destination="3aH-iX-8VC" collectionClass="NSMutableArray" id="ugs-pY-mWP"/>
+                        <outletCollection property="sortBy" destination="aXS-7E-fCf" collectionClass="NSMutableArray" id="d9d-vj-adP"/>
+                        <outletCollection property="sortBy" destination="F2D-Jb-er6" collectionClass="NSMutableArray" id="TLW-KX-ZJa"/>
+                        <outletCollection property="sortBy" destination="Cfy-Bb-jYt" collectionClass="NSMutableArray" id="tLR-GV-j46"/>
+                        <outletCollection property="sortBy" destination="GTw-fc-0kk" collectionClass="NSMutableArray" id="eh6-Dq-7EW"/>
+                        <outletCollection property="sortBy" destination="aXB-9d-Ysx" collectionClass="NSMutableArray" id="XDg-9g-HgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulI-JI-yuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1929,7 +1927,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="myFighterPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="n0J-Jl-LHx"/>
+                                            <action selector="ownButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="atu-fp-xhg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYN-UL-ZdV">
@@ -1939,8 +1937,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="myFighterPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="kui-Xy-ZYz"/>
-                                            <action selector="opponentFighterPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="sxk-0l-NEt"/>
+                                            <action selector="opponentButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="1Ro-Ih-FoL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cd-Nm-kvN">
@@ -1949,7 +1946,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="stapePressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="SuP-z8-yEq"/>
+                                            <action selector="stageButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="6rD-KQ-gnr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1964,7 +1961,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="6Qa-MA-8ZJ"/>
+                                            <action selector="switchSortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="XUk-bP-4QG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGA-cT-BxJ">
@@ -1973,7 +1970,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="v9g-aw-RZJ"/>
+                                            <action selector="switchSortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="3kw-Pj-uoG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qem-HE-KfH">
@@ -1982,7 +1979,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="1O7-fe-K9i"/>
+                                            <action selector="switchSortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="QDc-CM-FD8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5D-fC-sad">
@@ -1991,7 +1988,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="9Ua-XI-wLZ"/>
+                                            <action selector="switchSortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="RSW-72-sjd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxP-dH-JP0">
@@ -2000,7 +1997,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="4Xd-n3-FFH"/>
+                                            <action selector="switchSortButtonPressed:" destination="TRb-sO-TiI" eventType="touchUpInside" id="QG8-Hg-7yj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2025,14 +2022,14 @@
                     <navigationItem key="navigationItem" title="Analyze" id="fld-mv-dN4"/>
                     <connections>
                         <outlet property="tableView" destination="E3p-RS-zAQ" id="W6T-vm-TVM"/>
-                        <outletCollection property="changeRecord" destination="iOc-kD-iLi" collectionClass="NSMutableArray" id="oHQ-JQ-qfn"/>
-                        <outletCollection property="changeRecord" destination="QYN-UL-ZdV" collectionClass="NSMutableArray" id="3SZ-EC-LnR"/>
-                        <outletCollection property="changeRecord" destination="6Cd-Nm-kvN" collectionClass="NSMutableArray" id="vuy-cY-7Jp"/>
-                        <outletCollection property="sortBy" destination="YzG-bd-t76" collectionClass="NSMutableArray" id="aC6-Ed-YJY"/>
-                        <outletCollection property="sortBy" destination="MGA-cT-BxJ" collectionClass="NSMutableArray" id="acb-yx-7dm"/>
-                        <outletCollection property="sortBy" destination="Qem-HE-KfH" collectionClass="NSMutableArray" id="9XS-g4-RNM"/>
-                        <outletCollection property="sortBy" destination="c5D-fC-sad" collectionClass="NSMutableArray" id="aOC-af-7uC"/>
-                        <outletCollection property="sortBy" destination="LxP-dH-JP0" collectionClass="NSMutableArray" id="zic-nq-SsA"/>
+                        <outletCollection property="changeRecord" destination="iOc-kD-iLi" collectionClass="NSMutableArray" id="Tqa-vO-vTD"/>
+                        <outletCollection property="changeRecord" destination="QYN-UL-ZdV" collectionClass="NSMutableArray" id="K3r-Vh-hFh"/>
+                        <outletCollection property="changeRecord" destination="6Cd-Nm-kvN" collectionClass="NSMutableArray" id="gfr-Yk-ABe"/>
+                        <outletCollection property="sortBy" destination="YzG-bd-t76" collectionClass="NSMutableArray" id="52n-xE-j7m"/>
+                        <outletCollection property="sortBy" destination="MGA-cT-BxJ" collectionClass="NSMutableArray" id="3Re-LE-gCX"/>
+                        <outletCollection property="sortBy" destination="Qem-HE-KfH" collectionClass="NSMutableArray" id="PYQ-Ai-9dQ"/>
+                        <outletCollection property="sortBy" destination="c5D-fC-sad" collectionClass="NSMutableArray" id="nqR-kq-pel"/>
+                        <outletCollection property="sortBy" destination="LxP-dH-JP0" collectionClass="NSMutableArray" id="xpd-fU-OXc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="app-oe-kzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

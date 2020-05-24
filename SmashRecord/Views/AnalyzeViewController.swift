@@ -19,16 +19,8 @@ class AnalyzeViewController: UIViewController {
     var analyzeByStages: Results<AnalyzeByStage>?
     
     var changeVC: () -> Void = {}
-
-    // 一番上
-    @IBOutlet var changeRecord: [UIButton]!
     
     @IBOutlet weak var tableView: UITableView!
-    
-    // その下
-    @IBOutlet var sortBy: [UIButton]!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,32 +32,28 @@ class AnalyzeViewController: UIViewController {
         calculateRecord()
     }
     
-
-    @IBAction func myFighterPressed(_ sender: UIButton) {
+    func ownButtonPressed(changeRecord: [UIButton], sortBy: [UIButton]) {
         onButton(button: changeRecord[0])
         offButton(button: changeRecord[1])
         offButton(button: changeRecord[2])
         sortBy[0].setTitle("自分", for: .normal)
     }
     
-    @IBAction func opponentFighterPressed(_ sender: UIButton) {
+    func opponentButtonPressed(changeRecord: [UIButton], sortBy: [UIButton]) {
         onButton(button: changeRecord[1])
         offButton(button: changeRecord[0])
         offButton(button: changeRecord[2])
         sortBy[0].setTitle("相手", for: .normal)
     }
     
-    @IBAction func stapePressed(_ sender: UIButton) {
+    func stageButtonPressed(changeRecord: [UIButton], sortBy: [UIButton]) {
         onButton(button: changeRecord[2])
         offButton(button: changeRecord[0])
         offButton(button: changeRecord[1])
-        // ステージを選択時、キャラ->ステージ
         sortBy[0].setTitle("ステージ", for: .normal)
     }
     
-    
-    // switch Button color
-    @IBAction func sortButtonPressed(_ sender: UIButton) {
+    func switchSelectedSortButton(sender: UIButton, sortBy: [UIButton]) {
         
         for i in 0...sortBy.count - 1 {
             offButton(button: sortBy[i])

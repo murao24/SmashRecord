@@ -10,6 +10,9 @@ import UIKit
 
 class AnalyzeMyFighterViewController: AnalyzeViewController {
     
+    @IBOutlet var changeRecord: [UIButton]!
+    @IBOutlet var sortBy: [UIButton]!
+    
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -27,7 +30,24 @@ class AnalyzeMyFighterViewController: AnalyzeViewController {
         offButton(button: changeRecord[2])
         tableView.reloadData()
     }
-
+    
+    @IBAction func ownButtonPressed(_ sender: UIButton) {
+        ownButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
+    }
+    
+    @IBAction func opponentButtonPressed(_ sender: UIButton) {
+        opponentButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
+    }
+    
+    @IBAction func stageButtonPressed(_ sender: UIButton) {
+        stageButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
+    }
+    
+    @IBAction func switchSortButton(_ sender: UIButton) {
+        switchSelectedSortButton(sender: sender, sortBy: sortBy)
+    }
+    
+    
 }
 
 extension AnalyzeMyFighterViewController: UITableViewDataSource, UITableViewDelegate {
