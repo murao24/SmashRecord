@@ -10,6 +10,8 @@ import UIKit
 
 class AnalyzeOpponentViewController: AnalyzeViewController {
     
+    @IBOutlet var sortBy: [UIButton]!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,6 +26,11 @@ class AnalyzeOpponentViewController: AnalyzeViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    
+    @IBAction func sortButtonPressed(_ sender: UIButton) {
+        switchSelectedSortButton(sender: sender, sortBy: sortBy)
     }
     
 }

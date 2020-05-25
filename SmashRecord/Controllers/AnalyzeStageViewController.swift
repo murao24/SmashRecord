@@ -9,8 +9,9 @@ import UIKit
 
 class AnalyzeStageViewController: AnalyzeViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var sortBy: [UIButton]!
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         tableView.dataSource = self
@@ -26,6 +27,10 @@ class AnalyzeStageViewController: AnalyzeViewController {
         tableView.reloadData()
     }
     
+    @IBAction func sortButtonPressed(_ sender: UIButton) {
+        switchSelectedSortButton(sender: sender, sortBy: sortBy)
+    }
+
 }
 
 extension AnalyzeStageViewController: UITableViewDataSource

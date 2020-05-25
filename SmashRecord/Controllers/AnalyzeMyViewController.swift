@@ -11,6 +11,8 @@ import RealmSwift
 
 class AnalyzeMyFighterViewController: AnalyzeViewController {
     
+    @IBOutlet var sortBy: [UIButton]!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -27,6 +29,9 @@ class AnalyzeMyFighterViewController: AnalyzeViewController {
         tableView.reloadData()
     }
     
+    @IBAction func sortButtonPressed(_ sender: UIButton) {
+        switchSelectedSortButton(sender: sender, sortBy: sortBy)
+    }
     
 }
 
