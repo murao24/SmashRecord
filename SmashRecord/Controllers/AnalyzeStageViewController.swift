@@ -24,11 +24,15 @@ class AnalyzeStageViewController: AnalyzeViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        firstSortButtonSelected(sortBy: sortBy)
+        sortBy[0].setTitle("ステージ", for: .normal)
         tableView.reloadData()
     }
     
     @IBAction func sortButtonPressed(_ sender: UIButton) {
         switchSelectedSortButton(sender: sender, sortBy: sortBy)
+        tableView.reloadData()
     }
 
 }

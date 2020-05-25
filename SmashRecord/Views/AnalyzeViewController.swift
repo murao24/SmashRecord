@@ -40,6 +40,13 @@ class AnalyzeViewController: UIViewController {
         analyzeByStages = realm.objects(AnalyzeByStage.self).sorted(byKeyPath: sortedBy, ascending: ascending)
     }
     
+    func firstSortButtonSelected(sortBy: [UIButton]) {
+        for i in 0...sortBy.count - 1 {
+            offButton(button: sortBy[i])
+        }
+        onButton(button: sortBy[0])
+    }
+    
     func switchSelectedSortButton(sender: UIButton, sortBy: [UIButton]) {
         for i in 0...sortBy.count - 1 {
             offButton(button: sortBy[i])
