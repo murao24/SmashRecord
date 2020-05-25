@@ -26,55 +26,7 @@ class AnalyzeViewController: UIViewController {
         super.viewWillAppear(animated)
         calculateRecord()
     }
-    
-    func ownButtonPressed(changeRecord: [UIButton], sortBy: [UIButton]) {
-        onButton(button: changeRecord[0])
-        offButton(button: changeRecord[1])
-        offButton(button: changeRecord[2])
-        sortBy[0].setTitle("自分", for: .normal)
-    }
-    
-    func opponentButtonPressed(changeRecord: [UIButton], sortBy: [UIButton]) {
-        onButton(button: changeRecord[1])
-        offButton(button: changeRecord[0])
-        offButton(button: changeRecord[2])
-        sortBy[0].setTitle("相手", for: .normal)
-    }
-    
-    func stageButtonPressed(changeRecord: [UIButton], sortBy: [UIButton]) {
-        onButton(button: changeRecord[2])
-        offButton(button: changeRecord[0])
-        offButton(button: changeRecord[1])
-        sortBy[0].setTitle("ステージ", for: .normal)
-    }
-    
-    func switchSelectedSortButton(sender: UIButton, sortBy: [UIButton]) {
-        
-        for i in 0...sortBy.count - 1 {
-            offButton(button: sortBy[i])
-        }
-        
-        switch sender.tag {
-        case 0:
-            onButton(button: sortBy[0])
-            loadRecord(sortedBy: "fighterID", ascending: true)
-        case 1:
-            onButton(button: sortBy[1])
-            loadRecord(sortedBy: "gameCount")
-        case 2:
-            onButton(button: sortBy[2])
-            loadRecord(sortedBy: "winCount")
-        case 3:
-            onButton(button: sortBy[3])
-            loadRecord(sortedBy: "loseCount")
-        case 4:
-            onButton(button: sortBy[4])
-            loadRecord(sortedBy: "winRate")
-        default:
-            return
-        }
 
-    }
     
     func loadRecord(sortedBy: String, ascending: Bool = false) {
         records = realm.objects(Record.self)

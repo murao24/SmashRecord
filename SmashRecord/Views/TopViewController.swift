@@ -21,13 +21,14 @@ class TopViewController: AnalyzeViewController {
         
         onButton(button: changeRecord[0])
         onButton(button: sortBy[0])
-        
+
         pageViewController = children.first as? UIPageViewController
         
-        let ownVc = storyboard?.instantiateViewController(identifier: "MyViewController") as! AnalyzeMyFighterViewController
-        let opponentVc = storyboard?.instantiateViewController(identifier: "OpponentViewController") as! AnalyzeOpponentViewController
-        let stageVc = storyboard?.instantiateViewController(identifier: "StagetViewController") as! AnalyzeStageViewController
-        viewControllers = [ownVc, opponentVc, stageVc]
+        let ownVC = storyboard?.instantiateViewController(identifier: "MyViewController") as! AnalyzeMyFighterViewController
+        let opponentVC = storyboard?.instantiateViewController(identifier: "OpponentViewController") as! AnalyzeOpponentViewController
+        let stageVC = storyboard?.instantiateViewController(identifier: "StagetViewController") as! AnalyzeStageViewController
+
+        viewControllers = [ownVC, opponentVC, stageVC]
     }
     
     func switchVC(vc: UIViewController) {
@@ -36,29 +37,70 @@ class TopViewController: AnalyzeViewController {
         }
     }
     
-    func switchTopButton() {
-        onButton(button: changeRecord[0])
-        offButton(button: changeRecord[1])
-        offButton(button: changeRecord[2])
+    func switchTopButton(sender: UIButton) {
+        for i in 0...changeRecord.count - 1 {
+            offButton(button: changeRecord[i])
+        }
+        
+        switch sender.tag {
+        case 0:
+            onButton(button: changeRecord[0])
+            sortBy[0].setTitle("自分", for: .normal)
+        case 1:
+            onButton(button: changeRecord[1])
+            sortBy[0].setTitle("相手", for: .normal)
+        case 2:
+            onButton(button: changeRecord[2])
+            sortBy[0].setTitle("ステージ", for: .normal)
+        default:
+            return
+        }
     }
+    
+    func switchSelectedSortButton(sender: UIButton) {
+        for i in 0...sortBy.count - 1 {
+            offButton(button: sortBy[i])
+        }
+        
+        switch sender.tag {
+        case 0:
+            onButton(button: sortBy[0])
+            loadRecord(sortedBy: "fighterID", ascending: true)
+        case 1:
+            onButton(button: sortBy[1])
+            loadRecord(sortedBy: "gameCount")
+        case 2:
+            onButton(button: sortBy[2])
+            loadRecord(sortedBy: "winCount")
+        case 3:
+            onButton(button: sortBy[3])
+            loadRecord(sortedBy: "loseCount")
+        case 4:
+            onButton(button: sortBy[4])
+            loadRecord(sortedBy: "winRate")
+        default:
+            return
+        }
+    }
+
 
     
     @IBAction func ownButtonPressed(_ sender: UIButton) {
-        ownButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
+        switchTopButton(sender: sender)
         switchVC(vc: viewControllers[0])
     }
     
     @IBAction func opponentButtonPressed(_ sender: UIButton) {
-        opponentButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
+        switchTopButton(sender: sender)
         switchVC(vc: viewControllers[1])
     }
-    @IBAction func stageButtonPressed(_ sender: Any) {
-        stageButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
+    @IBAction func stageButtonPressed(_ sender: UIButton) {
+        switchTopButton(sender: sender)
         switchVC(vc: viewControllers[2])
     }
     
     @IBAction func sortByButtonPressed(_ sender: UIButton) {
-        switchSelectedSortButton(sender: sender, sortBy: sortBy)
+        switchSelectedSortButton(sender: sender)
     }
     
 }
