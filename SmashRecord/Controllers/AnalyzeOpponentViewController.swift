@@ -10,43 +10,20 @@ import UIKit
 
 class AnalyzeOpponentViewController: AnalyzeViewController {
     
-    @IBOutlet var changeRecord: [UIButton]!
-    @IBOutlet var sortBy: [UIButton]!
-    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 50
         
-        onButton(button: sortBy[0])
         loadRecord(sortedBy: "fighterID", ascending: true)
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        onButton(button: changeRecord[1])
-        offButton(button: changeRecord[0])
-        offButton(button: changeRecord[2])
         tableView.reloadData()
-    }
-    
-    @IBAction func ownButtonPressed(_ sender: UIButton) {
-        ownButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
-    }
-    
-    @IBAction func opponentButtonPressed(_ sender: UIButton) {
-        opponentButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
-    }
-    
-    @IBAction func stageButtonPressed(_ sender: UIButton) {
-        stageButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
-    }
-    
-    
-    @IBAction func switchSortButton(_ sender: UIButton) {
-        switchSelectedSortButton(sender: sender, sortBy: sortBy)
     }
     
 }

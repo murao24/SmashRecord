@@ -9,9 +9,7 @@ import UIKit
 
 class AnalyzeStageViewController: AnalyzeViewController {
     
-    @IBOutlet var changeRecord: [UIButton]!
-    @IBOutlet var sortBy: [UIButton]!
-    
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -19,35 +17,13 @@ class AnalyzeStageViewController: AnalyzeViewController {
         tableView.delegate = self
         tableView.rowHeight = 50
         
-        onButton(button: sortBy[0])
         loadRecord(sortedBy: "fighterID", ascending: true)
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        
-        onButton(button: changeRecord[2])
-        offButton(button: changeRecord[0])
-        offButton(button: changeRecord[1])
-        sortBy[0].setTitle("ステージ", for: .normal)
-    }
-    
-    @IBAction func ownButtonPressed(_ sender: UIButton) {
-        ownButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
-    }
-    
-    
-    @IBAction func opponentButtonPressed(_ sender: UIButton) {
-        opponentButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
-    }
-    
-    @IBAction func stageButtonPressed(_ sender: UIButton) {
-        stageButtonPressed(changeRecord: changeRecord, sortBy: sortBy)
-    }
-    
-    @IBAction func switchSortButtonPressed(_ sender: UIButton) {
-        switchSelectedSortButton(sender: sender, sortBy: sortBy)
     }
     
 }
