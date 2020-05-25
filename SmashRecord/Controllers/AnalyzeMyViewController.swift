@@ -31,7 +31,6 @@ class AnalyzeMyFighterViewController: AnalyzeViewController {
 
 extension AnalyzeMyFighterViewController: UITableViewDataSource, UITableViewDelegate {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return S.fightersArray.count
     }
@@ -65,5 +64,5 @@ extension AnalyzeMyFighterViewController: UITableViewDataSource, UITableViewDele
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
+
 }
