@@ -14,6 +14,9 @@ class FighterNote: Object {
     @objc dynamic var parentFighter: String = ""
     @objc dynamic var note: String = ""
     @objc dynamic var createdAt: Date?
-    let fighter = LinkingObjects(fromType: Fighter.self, property: "fighterNotes")
+
+    override static func primaryKey() -> String? {
+        return "parentFighter"
+    }
     
 }

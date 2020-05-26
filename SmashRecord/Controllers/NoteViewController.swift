@@ -54,12 +54,12 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - Tableview Delegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToFighter", sender: self)
+        performSegue(withIdentifier: "goToNote", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destinationVC = segue.destination as! FighterNoteViewController
+        let destinationVC = segue.destination as! FighterTextViewViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedFighter = fighters?[indexPath.row]
