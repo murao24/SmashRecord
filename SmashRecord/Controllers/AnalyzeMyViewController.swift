@@ -19,15 +19,17 @@ class AnalyzeMyFighterViewController: AnalyzeViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 50
-    
+        
         loadRecord(sortedBy: "fighterID", ascending: true)
         tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         firstSortButtonSelected(sortBy: sortBy)
         sortBy[0].setTitle("自分", for: .normal)
+
         tableView.reloadData()
     }
     

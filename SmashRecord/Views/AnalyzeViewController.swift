@@ -11,7 +11,6 @@ import RealmSwift
 
 class AnalyzeViewController: UIViewController {
     
-    
     let realm = try! Realm()
     
     var records: Results<Record>?
@@ -26,6 +25,7 @@ class AnalyzeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calculateRecord()
+
     }
 
     
