@@ -13,7 +13,6 @@ class FighterNote: Object {
     
     @objc dynamic var parentFighter: String = ""
     @objc dynamic var note: String = ""
-    @objc dynamic var createdAt: Date?
 
     override static func primaryKey() -> String? {
         return "parentFighter"

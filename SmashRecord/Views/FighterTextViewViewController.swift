@@ -22,6 +22,7 @@ class FighterTextViewViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
+        navigationController?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +62,6 @@ class FighterTextViewViewController: UIViewController, UITextViewDelegate {
         
         // save
         let newNote = FighterNote()
-        newNote.createdAt = Date()
         newNote.note = self.textView.text!
         newNote.parentFighter = selectedFighter
         save(note: newNote)
@@ -78,5 +78,15 @@ class FighterTextViewViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+}
 
+extension FighterTextViewViewController: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        let newNote = FighterNote()
+        newNote.note = self.textView.text!
+        newNote.parentFighter = selectedFighter
+        save(note: newNote)
+    }
+    
 }
