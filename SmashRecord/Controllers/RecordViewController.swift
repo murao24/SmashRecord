@@ -15,6 +15,7 @@ class RecordViewController: UIViewController {
     
     let realm = try! Realm()
     
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var stageLabel: UILabel!
     
@@ -35,6 +36,10 @@ class RecordViewController: UIViewController {
     //MARK: - Data Manipulation Methods
     func loadRecords() {
         records = realm.objects(Record.self).sorted(byKeyPath: "date", ascending: false)
+        tableView.reloadData()
+    }
+    
+    func load() {
         tableView.reloadData()
     }
     
@@ -100,6 +105,6 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
         return configulation
 
     }
-    
-    
+
 }
+

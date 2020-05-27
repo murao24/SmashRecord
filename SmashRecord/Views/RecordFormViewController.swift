@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class RecordFormViewController: UIViewController {
-    
+
     var records: Results<Record>?
     
     let realm = try! Realm()
@@ -94,6 +94,7 @@ class RecordFormViewController: UIViewController {
 
         save(record: newRecord)
 
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
@@ -102,19 +103,26 @@ class RecordFormViewController: UIViewController {
     
     
     func save(record: Record) {
-        
         do {
             try realm.write {
                 realm.add(record)
             }
-            dismiss(animated: true, completion: nil)
         } catch {
             print("Error saving record \(error)")
         }
-
     }
     
-
-    
-    
 }
+
+extension RecordFormViewController {
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+    }
+
+}
+
