@@ -20,6 +20,8 @@ class RecordFormViewController: UIViewController {
     @IBOutlet weak var stageView: UIButton!
     @IBOutlet weak var winButton: UIButton!
     @IBOutlet weak var loseButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
     
     var myFighter = "wario"
     var opponentFighter = "mario"
@@ -33,6 +35,8 @@ class RecordFormViewController: UIViewController {
         opponentFighterView.setImage(UIImage(named: opponentFighter), for: .normal)
         stageView.setImage(UIImage(named: stage), for: .normal)
         onButton(button: winButton)
+        
+        registerButton.layer.cornerRadius = 20
         
     }
     

@@ -1187,17 +1187,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦を記録！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8Z-XD-DUf">
-                                <rect key="frame" x="40" y="124" width="334" height="106"/>
+                                <rect key="frame" x="40" y="124" width="334" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-WD-lcm">
-                                <rect key="frame" x="40" y="712" width="334" height="50"/>
+                                <rect key="frame" x="40" y="770" width="334" height="42"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="CJc-pW-0Jw"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="登録">
                                     <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1207,7 +1204,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="C3B-ed-ZDk">
-                                <rect key="frame" x="40" y="310" width="334" height="252"/>
+                                <rect key="frame" x="40" y="251" width="334" height="252"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="QS5-LE-VMx">
                                         <rect key="frame" x="0.0" y="0.0" width="234" height="36"/>
@@ -1296,37 +1293,21 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pd-ZH-jzM">
-                                <rect key="frame" x="40" y="772" width="334" height="50"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="TUG-eK-lmD"/>
+                                    <constraint firstAttribute="height" constant="252" id="voF-vW-rac"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="戻る">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="backPressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="uMq-uz-7MK"/>
-                                    <action selector="savePressed:" destination="H1w-7g-Et8" eventType="touchUpInside" id="wIb-5w-r7Y"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N8Z-XD-DUf" firstAttribute="top" secondItem="jGC-OF-2Bx" secondAttribute="top" constant="80" id="2hC-8U-2Kd"/>
                             <constraint firstItem="C3B-ed-ZDk" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="Co7-T2-dVV"/>
-                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="bottom" secondItem="4Pd-ZH-jzM" secondAttribute="bottom" constant="40" id="H07-eV-E3h"/>
-                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="4Pd-ZH-jzM" secondAttribute="trailing" constant="40" id="KlT-on-eZt"/>
+                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="kmj-WD-lcm" secondAttribute="trailing" constant="40" id="JHT-g6-gvw"/>
+                            <constraint firstItem="kmj-WD-lcm" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="Ncv-Hm-27i"/>
                             <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="N8Z-XD-DUf" secondAttribute="trailing" constant="40" id="UUm-2g-yTR"/>
-                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="kmj-WD-lcm" secondAttribute="trailing" constant="40" id="aDO-R0-fqH"/>
+                            <constraint firstItem="jGC-OF-2Bx" firstAttribute="bottom" secondItem="kmj-WD-lcm" secondAttribute="bottom" constant="50" id="aMQ-nH-q2L"/>
                             <constraint firstItem="N8Z-XD-DUf" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="bNy-eA-MRB"/>
-                            <constraint firstItem="4Pd-ZH-jzM" firstAttribute="top" secondItem="kmj-WD-lcm" secondAttribute="bottom" constant="10" id="bhi-5X-hOM"/>
-                            <constraint firstItem="kmj-WD-lcm" firstAttribute="top" secondItem="C3B-ed-ZDk" secondAttribute="bottom" constant="150" id="epw-iH-vgG"/>
-                            <constraint firstItem="kmj-WD-lcm" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="rgF-7g-pFz"/>
                             <constraint firstItem="jGC-OF-2Bx" firstAttribute="trailing" secondItem="C3B-ed-ZDk" secondAttribute="trailing" constant="40" id="yzg-4k-cs9"/>
-                            <constraint firstItem="4Pd-ZH-jzM" firstAttribute="leading" secondItem="jGC-OF-2Bx" secondAttribute="leading" constant="40" id="ziB-2X-c1I"/>
                             <constraint firstItem="C3B-ed-ZDk" firstAttribute="top" secondItem="N8Z-XD-DUf" secondAttribute="bottom" constant="80" id="zvy-P4-GsS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jGC-OF-2Bx"/>
@@ -1336,6 +1317,7 @@
                         <outlet property="loseButton" destination="7nA-0w-EoQ" id="pwA-Uo-M8c"/>
                         <outlet property="myFighterView" destination="M5O-jD-HLe" id="srm-BQ-h6w"/>
                         <outlet property="opponentFighterView" destination="uDs-r4-EML" id="wRC-d8-dZd"/>
+                        <outlet property="registerButton" destination="kmj-WD-lcm" id="pE4-UU-8r2"/>
                         <outlet property="stageView" destination="9d2-uz-CWJ" id="jiZ-cI-esG"/>
                         <outlet property="winButton" destination="zLB-1l-I6y" id="lvX-M6-s1m"/>
                         <segue destination="IWw-tz-OUj" kind="presentation" identifier="goToSelectStage" id="AQ6-8y-hP3"/>
