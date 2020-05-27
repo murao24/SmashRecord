@@ -8,4 +8,5 @@ target 'SmashRecord' do
   # Pods for SmashRecord
   pod 'RealmSwift'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'IQKeyboardManagerSwift'
 end

@@ -17,11 +17,7 @@ class FighterTextViewViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var textView: UITextView!
     
-    var selectedFighter: Fighter? {
-        didSet {
-            loadNotes()
-        }
-    }
+    var selectedFighter = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +26,15 @@ class FighterTextViewViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = selectedFighter?.fighterName
+        title = selectedFighter
+        loadNotes()
+        
+        guard notes?.count != 0 else {
+            textView.text = ""
+            return
+        }
+        textView.text = "\(notes![0].note)"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +44,7 @@ class FighterTextViewViewController: UIViewController, UITextViewDelegate {
     // MARK: - Data manipulation Methods
     
     func loadNotes() {
-        notes = realm.objects(FighterNote.self).sorted(byKeyPath: "parentFighter", ascending: true)
+        notes = realm.objects(FighterNote.self).filter("parentFighter CONTAINS[cd] %@", selectedFighter)
     }
     
     
@@ -56,15 +60,11 @@ class FighterTextViewViewController: UIViewController, UITextViewDelegate {
         self.navigationItem.rightBarButtonItem = .none
         
         // save
-        if let selectedFighter = self.selectedFighter {
-            
-            let newNote = FighterNote()
-            newNote.createdAt = Date()
-            newNote.note = self.textView.text!
-            newNote.parentFighter = selectedFighter.fighterName
-            save(note: newNote)
-            
-        }
+        let newNote = FighterNote()
+        newNote.createdAt = Date()
+        newNote.note = self.textView.text!
+        newNote.parentFighter = selectedFighter
+        save(note: newNote)
 
     }
 

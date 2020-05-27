@@ -62,7 +62,7 @@ extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
         let destinationVC = segue.destination as! FighterTextViewViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedFighter = fighters?[indexPath.row]
+            destinationVC.selectedFighter = fighters![indexPath.row].fighterName
         }
         
     }
