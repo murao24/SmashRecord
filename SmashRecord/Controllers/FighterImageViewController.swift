@@ -34,7 +34,6 @@ class FighterImageViewController: UIViewController {
         let num = sender.tag
         fighterName = S.fightersArray[num][1]
 
-        
         switch switchSettingFighterImage {
         case "myFighter":
             let preVC = self.presentingViewController as! RecordFormViewController
@@ -45,6 +44,15 @@ class FighterImageViewController: UIViewController {
             let preVC = self.presentingViewController as! RecordFormViewController
             preVC.opponentFighterView.setImage(UIImage(named: fighterName), for: .normal)
             preVC.opponentFighter = fighterName
+            dismiss(animated: true, completion: nil)
+        case "mainFighter":
+            let preNC = self.presentingViewController as! UINavigationController
+            let preTC = preNC.viewControllers[preNC.viewControllers.count - 1] as! UITabBarController
+            let preNCofAcountVC = preTC.viewControllers?[1] as! UINavigationController
+            let accountVC = preNCofAcountVC.viewControllers.first as! AccountViewController
+            accountVC.fighterButton.setImage(UIImage(named: fighterName), for: .normal)
+            accountVC.mainFighter = fighterName
+            accountVC.tableView.reloadData()
             dismiss(animated: true, completion: nil)
         default:
             print("Error saving fighter image.")

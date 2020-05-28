@@ -25,7 +25,6 @@ class AnalyzeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calculateRecord()
-
     }
 
     
@@ -45,6 +44,7 @@ class AnalyzeViewController: UIViewController {
             offButton(button: sortBy[i])
         }
         onButton(button: sortBy[0])
+        loadRecord(sortedBy: "fighterID", ascending: true)
     }
     
     func switchSelectedSortButton(sender: UIButton, sortBy: [UIButton]) {
