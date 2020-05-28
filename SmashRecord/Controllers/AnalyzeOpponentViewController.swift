@@ -52,8 +52,9 @@ extension AnalyzeOpponentViewController: UITableViewDataSource, UITableViewDeleg
         
         if let analyzeByOpponentFighters = analyzeByOpponentFighters?[indexPath.row] {
             
+            cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighters.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
+            
             guard analyzeByOpponentFighters.gameCount != 0 else {
-                cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighters.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
                 cell.gameCountLabel.text = "-"
                 cell.winCountLabel.text = "-"
                 cell.loseCountLabel.text = "-"
@@ -61,7 +62,6 @@ extension AnalyzeOpponentViewController: UITableViewDataSource, UITableViewDeleg
                 return cell
             }
             
-            cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighters.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
             cell.gameCountLabel.text = "\(String(analyzeByOpponentFighters.gameCount))"
             cell.winCountLabel.text = "\(String(analyzeByOpponentFighters.winCount))"
             cell.loseCountLabel.text = "\(String(analyzeByOpponentFighters.loseCount))"

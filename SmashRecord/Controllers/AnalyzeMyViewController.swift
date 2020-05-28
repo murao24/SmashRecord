@@ -51,9 +51,10 @@ extension AnalyzeMyFighterViewController: UITableViewDataSource, UITableViewDele
         cell.winRateLabel.adjustsFontSizeToFitWidth = true
         
         if let analyzeByFighters = analyzeByFighters?[indexPath.row] {
+            
+            cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
 
             guard analyzeByFighters.gameCount != 0 else {
-                cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
                 cell.gameCountLabel.text = "-"
                 cell.winCountLabel.text = "-"
                 cell.loseCountLabel.text = "-"
@@ -61,7 +62,6 @@ extension AnalyzeMyFighterViewController: UITableViewDataSource, UITableViewDele
                 return cell
             }
 
-            cell.fighterLabel.image = UIImage(named: analyzeByFighters.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
             cell.gameCountLabel.text = "\(String(analyzeByFighters.gameCount))"
             cell.winCountLabel.text = "\(String(analyzeByFighters.winCount))"
             cell.loseCountLabel.text = "\(String(analyzeByFighters.loseCount))"

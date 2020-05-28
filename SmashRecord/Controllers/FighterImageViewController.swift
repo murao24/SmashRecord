@@ -48,11 +48,11 @@ class FighterImageViewController: UIViewController {
         case "mainFighter":
             let preNC = self.presentingViewController as! UINavigationController
             let preTC = preNC.viewControllers[preNC.viewControllers.count - 1] as! UITabBarController
-            let preNCofAcountVC = preTC.viewControllers?[1] as! UINavigationController
-            let accountVC = preNCofAcountVC.viewControllers.first as! AccountViewController
-            accountVC.fighterButton.setImage(UIImage(named: fighterName), for: .normal)
-            accountVC.mainFighter = fighterName
-            accountVC.tableView.reloadData()
+            let preNCofMainFighterVC = preTC.viewControllers?[1] as! UINavigationController
+            let mainFighterVC = preNCofMainFighterVC.viewControllers.first as! MainFighterViewController
+            mainFighterVC.fighterButton.setImage(UIImage(named: fighterName), for: .normal)
+            mainFighterVC.createMainFighter(fighterName: fighterName)
+            mainFighterVC.tableView.reloadData()
             dismiss(animated: true, completion: nil)
         default:
             print("Error saving fighter image.")

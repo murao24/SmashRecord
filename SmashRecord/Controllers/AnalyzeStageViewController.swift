@@ -50,10 +50,11 @@ extension AnalyzeStageViewController: UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
         cell.winRateLabel.adjustsFontSizeToFitWidth = true
         
-        
         if let analyzeByStages = analyzeByStages?[indexPath.row] {
+            
+            cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
+            
             guard analyzeByStages.gameCount != 0 else {
-                cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
                 cell.gameCountLabel.text = "-"
                 cell.winCountLabel.text = "-"
                 cell.loseCountLabel.text = "-"
@@ -61,7 +62,6 @@ extension AnalyzeStageViewController: UITableViewDataSource
                 return cell
             }
             
-            cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
             cell.gameCountLabel.text = "\(String(analyzeByStages.gameCount))"
             cell.winCountLabel.text = "\(String(analyzeByStages.winCount))"
             cell.loseCountLabel.text = "\(String(analyzeByStages.loseCount))"

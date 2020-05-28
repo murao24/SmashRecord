@@ -24,7 +24,7 @@
 		04373F0C245CF59000583C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04373F0A245CF59000583C58 /* Main.storyboard */; };
 		04373F0E245CF59100583C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04373F0D245CF59100583C58 /* Assets.xcassets */; };
 		04373F11245CF59100583C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04373F0F245CF59100583C58 /* LaunchScreen.storyboard */; };
-		04373F1F245CFE9200583C58 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1E245CFE9200583C58 /* AccountViewController.swift */; };
+		04373F1F245CFE9200583C58 /* MainFighterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F1E245CFE9200583C58 /* MainFighterViewController.swift */; };
 		04373F21245CFF2500583C58 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04373F20245CFF2500583C58 /* UIView+AddBorder.swift */; };
 		046BBDEF245D5F1D00B8A8E9 /* FighterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDEE245D5F1D00B8A8E9 /* FighterTableViewCell.swift */; };
 		046BBDF6245E51E100B8A8E9 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BBDF5245E51E100B8A8E9 /* Fighter.swift */; };
@@ -36,6 +36,7 @@
 		048CCE9D2463F53600B4C400 /* RecordFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCE9C2463F53600B4C400 /* RecordFormViewController.swift */; };
 		048CCE9F2463F54C00B4C400 /* FighterImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCE9E2463F54C00B4C400 /* FighterImageViewController.swift */; };
 		0493AE28246E51AA004871E0 /* AnalyzeByStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493AE27246E51AA004871E0 /* AnalyzeByStage.swift */; };
+		04C19581247F79E400331520 /* MainFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19580247F79E400331520 /* MainFighter.swift */; };
 		04C689A8247CDDA000DEDA0E /* FighterTextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C689A7247CDDA000DEDA0E /* FighterTextViewViewController.swift */; };
 		04CD59CA245D364A00976595 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD59C9245D364A00976595 /* AlertController.swift */; };
 		04CD59D0245D513700976595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CD59CF245D513700976595 /* GoogleService-Info.plist */; };
@@ -63,7 +64,7 @@
 		04373F0D245CF59100583C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04373F10245CF59100583C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04373F12245CF59100583C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04373F1E245CFE9200583C58 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		04373F1E245CFE9200583C58 /* MainFighterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFighterViewController.swift; sourceTree = "<group>"; };
 		04373F20245CFF2500583C58 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddBorder.swift"; sourceTree = "<group>"; };
 		046BBDEE245D5F1D00B8A8E9 /* FighterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterTableViewCell.swift; sourceTree = "<group>"; };
 		046BBDF5245E51E100B8A8E9 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fighter.swift; path = SmashRecord/Fighter.swift; sourceTree = SOURCE_ROOT; };
@@ -75,6 +76,7 @@
 		048CCE9C2463F53600B4C400 /* RecordFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordFormViewController.swift; path = SmashRecord/Views/RecordFormViewController.swift; sourceTree = SOURCE_ROOT; };
 		048CCE9E2463F54C00B4C400 /* FighterImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterImageViewController.swift; sourceTree = "<group>"; };
 		0493AE27246E51AA004871E0 /* AnalyzeByStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeByStage.swift; sourceTree = "<group>"; };
+		04C19580247F79E400331520 /* MainFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainFighter.swift; path = SmashRecord/Controllers/MainFighter.swift; sourceTree = SOURCE_ROOT; };
 		04C689A7247CDDA000DEDA0E /* FighterTextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FighterTextViewViewController.swift; path = SmashRecord/Views/FighterTextViewViewController.swift; sourceTree = SOURCE_ROOT; };
 		04CD59C9245D364A00976595 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		04CD59CF245D513700976595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 				04278F4024764AF7008B829D /* AnalyzeMyViewController.swift */,
 				04278F4224764B55008B829D /* AnalyzeOpponentViewController.swift */,
 				04278F4424764B84008B829D /* AnalyzeStageViewController.swift */,
-				04373F1E245CFE9200583C58 /* AccountViewController.swift */,
+				04373F1E245CFE9200583C58 /* MainFighterViewController.swift */,
 				04CD59C9245D364A00976595 /* AlertController.swift */,
 				040B3814246BBD420033DBA7 /* SwitchButtonController.swift */,
 			);
@@ -175,6 +177,7 @@
 				042EF405246E16F8008131FA /* AnalyzeByFighter.swift */,
 				0423EFE8246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift */,
 				0493AE27246E51AA004871E0 /* AnalyzeByStage.swift */,
+				04C19580247F79E400331520 /* MainFighter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				04373F09245CF59000583C58 /* RecordViewController.swift in Sources */,
 				046BBDF6245E51E100B8A8E9 /* Fighter.swift in Sources */,
 				046BBE002463819600B8A8E9 /* Record.swift in Sources */,
+				04C19581247F79E400331520 /* MainFighter.swift in Sources */,
 				04278F4524764B84008B829D /* AnalyzeStageViewController.swift in Sources */,
 				046BBE062463989E00B8A8E9 /* RecordTableViewCell.swift in Sources */,
 				0423EFE9246E3CE4009AA5A8 /* AnalyzeByOpponentFighter.swift in Sources */,
@@ -325,7 +329,7 @@
 				04373F07245CF59000583C58 /* NoteViewController.swift in Sources */,
 				040B3811246936930033DBA7 /* StageViewController.swift in Sources */,
 				04278F3B24764053008B829D /* PageViewController.swift in Sources */,
-				04373F1F245CFE9200583C58 /* AccountViewController.swift in Sources */,
+				04373F1F245CFE9200583C58 /* MainFighterViewController.swift in Sources */,
 				04373F03245CF59000583C58 /* AppDelegate.swift in Sources */,
 				04373F21245CFF2500583C58 /* UIView+AddBorder.swift in Sources */,
 				046BBDEF245D5F1D00B8A8E9 /* FighterTableViewCell.swift in Sources */,
