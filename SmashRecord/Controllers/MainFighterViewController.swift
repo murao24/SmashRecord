@@ -39,19 +39,25 @@ class MainFighterViewController: AnalyzeViewController {
         tableView.rowHeight = 50
         
         loadMainFighter()
-
-        if mainFighter?.count == 0 {
-            fighterButton.setImage(UIImage(named: "mario"), for: .normal)
-        } else {
-            if let mainFighter = mainFighter {
-                fighterButton.setImage(UIImage(named: mainFighter[0].mainFighter), for: .normal)
-            }
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadMainFighter()
+        
+        if mainFighter?.count == 0 {
+            fighterButton.setImage(UIImage(named: "mario"), for: .normal)
+            gameCountLabel.text = "-"
+            winCountLabel.text = "-"
+            loseCountLabel.text = "-"
+            winRateLabel.text = "-"
+        } else {
+            if let mainFighter = mainFighter {
+                fighterButton.setImage(UIImage(named: mainFighter[0].mainFighter), for: .normal)
+                loadTotalRecord(mainFighter: mainFighter[0].mainFighter)
+            }
+        }
+        
         tableView.reloadData()
     }
     
@@ -84,7 +90,7 @@ class MainFighterViewController: AnalyzeViewController {
                         if masterRecord.count != 0 {
                             if let winRecord = winRecord {
                                 if winRecord.count != 0 {
-                                    r.append([mainFighter, S.fightersArray[i][1], masterRecord.count, masterRecord.count])
+                                    r.append([mainFighter, S.fightersArray[i][1], masterRecord.count, winRecord.count])
                                 } else {
                                     r.append([mainFighter, S.fightersArray[i][1], masterRecord.count, 0])
                                 }
@@ -96,10 +102,20 @@ class MainFighterViewController: AnalyzeViewController {
                     }
                     
                 }
-                print(r.count)
             }
         }
 
+    }
+    
+    func loadTotalRecord(mainFighter: String) {
+        analyzeByFighters = realm.objects(AnalyzeByFighter.self)
+        analyzeByFighters = analyzeByFighters?.filter("myFighter == %@", mainFighter)
+        if let analyzeByFighters = analyzeByFighters {
+            gameCountLabel.text = "\(analyzeByFighters[0].gameCount)"
+            winCountLabel.text = "\(analyzeByFighters[0].winCount)"
+            loseCountLabel.text = "\(analyzeByFighters[0].loseCount)"
+            winRateLabel.text = "\(analyzeByFighters[0].winRate)%"
+        }
     }
     
     func createMainFighter(fighterName: String) {
@@ -143,17 +159,34 @@ extension MainFighterViewController: UITableViewDataSource, UITableViewDelegate 
         
         if let mainFighter = mainFighter {
             
-            let gameCount = r[indexPath.row + 1][2] as! Int
-            let winCount = r[indexPath.row + 1][3] as! Int
-            let loseCount = gameCount - winCount
-//            let winRate = winCount / gameCount * 100
-
-            cell.gameCountLabel.text = "\(gameCount)"
-            cell.winCountLabel.text = "\(winCount)"
-            cell.loseCountLabel.text = "\(loseCount)"
-            cell.winRateLabel.text = "%"
-            
-            
+            if mainFighter.count != 0 {
+                
+                let gameCount = r[indexPath.row + 1][2] as! Int
+                let winCount = r[indexPath.row + 1][3] as! Int
+                let loseCount = gameCount - winCount
+                var winRate = 0
+                if gameCount != 0 {
+                    winRate = Int(CGFloat(winCount) / CGFloat(gameCount) * 100)
+                }
+                
+                if gameCount != 0 {
+                    cell.gameCountLabel.text = "\(gameCount)"
+                    cell.winCountLabel.text = "\(winCount)"
+                    cell.loseCountLabel.text = "\(loseCount)"
+                    cell.winRateLabel.text = "\(winRate)%"
+                } else {
+                    cell.gameCountLabel.text = "-"
+                    cell.winCountLabel.text = "-"
+                    cell.loseCountLabel.text = "-"
+                    cell.winRateLabel.text = "-"
+                }
+            }
+            else {
+                cell.gameCountLabel.text = "-"
+                cell.winCountLabel.text = "-"
+                cell.loseCountLabel.text = "-"
+                cell.winRateLabel.text = "-"
+            }
         }
         
         
