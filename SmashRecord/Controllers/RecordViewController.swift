@@ -26,6 +26,9 @@ class RecordViewController: UIViewController {
         stageLabel.adjustsFontSizeToFitWidth = true
         tableView.rowHeight = 50
         loadRecords()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

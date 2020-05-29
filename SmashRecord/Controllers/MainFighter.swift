@@ -11,7 +11,7 @@ import RealmSwift
 
 class MainFighter: Object {
     
-    @objc dynamic var mainFighter: String = ""
+    @objc dynamic var mainFighter: String = "mario"
     @objc dynamic var ID: Int = 0
     
     override static func primaryKey() -> String? {

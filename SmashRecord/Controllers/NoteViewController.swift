@@ -22,8 +22,6 @@ class NoteViewController: UIViewController {
         saveFighter()
         tableView.reloadData()
         tableView.rowHeight = 70
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

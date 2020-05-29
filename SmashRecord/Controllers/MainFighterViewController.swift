@@ -12,6 +12,7 @@ import RealmSwift
 class MainFighterViewController: AnalyzeViewController {
     
     private var mainFighter: Results<MainFighter>?
+    private var filteredRecord: Results<Record>?
     
     @IBOutlet weak var fighterButton: UIButton!
     
@@ -24,17 +25,76 @@ class MainFighterViewController: AnalyzeViewController {
     
     let mySections = ["対戦相手", "ステージ"]
     
+    var matrix:[[String]] = [["hoge","fuga"] ,["ohayo","hello"]]
+    
+    var r:[[Any]] = [[]]
+    
+    var masterRecord: Results<Record>?
+    var winRecord: Results<Record>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
+        loadMainFighter()
+
+        if mainFighter?.count == 0 {
+            fighterButton.setImage(UIImage(named: "mario"), for: .normal)
+        } else {
+            if let mainFighter = mainFighter {
+                fighterButton.setImage(UIImage(named: mainFighter[0].mainFighter), for: .normal)
+            }
+        }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        loadMainFighter()
+    }
+    
     
     @IBAction func mainFighterPressed(_ sender: Any) {
         let fighterImageVC = storyboard?.instantiateViewController(identifier: "FIghterImageViewController") as! FighterImageViewController
         fighterImageVC.switchSettingFighterImage = "mainFighter"
         self.present(fighterImageVC, animated: true, completion: nil)
+    }
+    
+    func loadMainFighter() {
+        mainFighter = realm.objects(MainFighter.self)
+        records = realm.objects(Record.self)
+
+        if mainFighter?.count != 0 {
+            if let mainFighter = mainFighter?[0].mainFighter {
+                
+                for i in 0...S.fightersArray.count - 1 {
+                    // search mainFighter
+                    records = records?.filter("myFighter == %@", mainFighter)
+                    // search mainFighter * opponentFighter
+                    masterRecord = records?.filter("opponentFighter == %@", S.fightersArray[i][1])
+
+                    winRecord = masterRecord?.filter("result == 1")
+                    
+                    if let masterRecord = masterRecord {
+                        
+                        // recordがある
+                        if masterRecord.count != 0 {
+                            if let winRecord = winRecord {
+                                if winRecord.count != 0 {
+                                    r.append([mainFighter, S.fightersArray[i][1], masterRecord.count, masterRecord.count])
+                                } else {
+                                    r.append([mainFighter, S.fightersArray[i][1], masterRecord.count, 0])
+                                }
+                            }
+                        // recordがない
+                        } else {
+                            r.append([mainFighter, S.fightersArray[i][1], 0, 0])
+                        }
+                    }
+                    
+                }
+            }
+        }
+
     }
     
     func createMainFighter(fighterName: String) {
@@ -73,7 +133,21 @@ extension MainFighterViewController: UITableViewDataSource, UITableViewDelegate 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
+        
         cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])
+        
+        if let mainFighter = mainFighter {
+
+            if mainFighter.count == 0 || r[indexPath.row + 1][3] as! Int == 0 {
+                cell.gameCountLabel.text = "-"
+                cell.winCountLabel.text = "-"
+                cell.loseCountLabel.text = "-"
+                cell.winRateLabel.text = "-"
+            }
+            
+            
+        }
+        
         
         return cell
     }

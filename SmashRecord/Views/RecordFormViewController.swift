@@ -11,7 +11,7 @@ import RealmSwift
 
 class RecordFormViewController: UIViewController {
 
-    var records: Results<Record>?
+    var mainFighter: Results<MainFighter>?
     
     let realm = try! Realm()
     
@@ -23,13 +23,21 @@ class RecordFormViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     
-    var myFighter = "wario"
+    var myFighter = "mario"
     var opponentFighter = "mario"
     var stage = "syuutenn"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadMainFighter()
+        
+        if mainFighter?.count != 0 {
+            if let mainFighter = mainFighter {
+                myFighter = mainFighter[0].mainFighter
+            }
+        }
         
         myFighterView.setImage(UIImage(named: myFighter), for: .normal)
         opponentFighterView.setImage(UIImage(named: opponentFighter), for: .normal)
@@ -114,6 +122,10 @@ class RecordFormViewController: UIViewController {
         } catch {
             print("Error saving record \(error)")
         }
+    }
+    
+    func loadMainFighter() {
+        mainFighter = realm.objects(MainFighter.self)
     }
     
 }
