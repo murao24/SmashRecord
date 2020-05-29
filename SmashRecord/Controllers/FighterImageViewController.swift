@@ -52,6 +52,7 @@ class FighterImageViewController: UIViewController {
             let mainFighterVC = preNCofMainFighterVC.viewControllers.first as! MainFighterViewController
             mainFighterVC.fighterButton.setImage(UIImage(named: fighterName), for: .normal)
             mainFighterVC.createMainFighter(fighterName: fighterName)
+            mainFighterVC.loadMainFighter()
             mainFighterVC.tableView.reloadData()
             dismiss(animated: true, completion: nil)
         default:

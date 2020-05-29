@@ -36,6 +36,8 @@ class MainFighterViewController: AnalyzeViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 50
+        
         loadMainFighter()
 
         if mainFighter?.count == 0 {
@@ -49,7 +51,8 @@ class MainFighterViewController: AnalyzeViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        loadMainFighter()
+        loadMainFighter()
+        tableView.reloadData()
     }
     
     
@@ -60,6 +63,7 @@ class MainFighterViewController: AnalyzeViewController {
     }
     
     func loadMainFighter() {
+        r = [[]]
         mainFighter = realm.objects(MainFighter.self)
         records = realm.objects(Record.self)
 
@@ -92,6 +96,7 @@ class MainFighterViewController: AnalyzeViewController {
                     }
                     
                 }
+                print(r.count)
             }
         }
 
@@ -137,13 +142,16 @@ extension MainFighterViewController: UITableViewDataSource, UITableViewDelegate 
         cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])
         
         if let mainFighter = mainFighter {
+            
+            let gameCount = r[indexPath.row + 1][2] as! Int
+            let winCount = r[indexPath.row + 1][3] as! Int
+            let loseCount = gameCount - winCount
+//            let winRate = winCount / gameCount * 100
 
-            if mainFighter.count == 0 || r[indexPath.row + 1][3] as! Int == 0 {
-                cell.gameCountLabel.text = "-"
-                cell.winCountLabel.text = "-"
-                cell.loseCountLabel.text = "-"
-                cell.winRateLabel.text = "-"
-            }
+            cell.gameCountLabel.text = "\(gameCount)"
+            cell.winCountLabel.text = "\(winCount)"
+            cell.loseCountLabel.text = "\(loseCount)"
+            cell.winRateLabel.text = "%"
             
             
         }
