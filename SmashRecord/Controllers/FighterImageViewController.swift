@@ -54,6 +54,8 @@ class FighterImageViewController: UIViewController {
             mainFighterVC.createMainFighter(fighterName: fighterName)
             mainFighterVC.loadMainFighter()
             mainFighterVC.loadTotalRecord(mainFighter: fighterName)
+            mainFighterVC.urgeSelectMainFighterLabel.text = ""
+            mainFighterVC.adjustButtonImage()
             mainFighterVC.tableView.reloadData()
             dismiss(animated: true, completion: nil)
         default:

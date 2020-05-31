@@ -14,6 +14,7 @@ class MainFighterViewController: AnalyzeViewController {
     private var filteredRecord: Results<Record>?
     
     @IBOutlet weak var fighterButton: UIButton!
+    @IBOutlet weak var urgeSelectMainFighterLabel: UILabel!
     
     @IBOutlet weak var gameCountLabel: UILabel!
     @IBOutlet weak var winCountLabel: UILabel!
@@ -41,13 +42,17 @@ class MainFighterViewController: AnalyzeViewController {
         loadMainFighter()
         
         if mainFighter?.count == 0 {
-            fighterButton.setImage(UIImage(), for: .normal)
+            let largeConfiguration = UIImage.SymbolConfiguration(scale: .large)
+            let largeSymbolImage = UIImage(systemName: "person.fill", withConfiguration: largeConfiguration)
+            urgeSelectMainFighterLabel.text = "メインキャラクターを選択！"
+            fighterButton.setImage(largeSymbolImage, for: .normal)
             gameCountLabel.text = "-"
             winCountLabel.text = "-"
             loseCountLabel.text = "-"
             winRateLabel.text = "-"
         } else {
             if let mainFighter = mainFighter {
+                urgeSelectMainFighterLabel.text = ""
                 fighterButton.setImage(UIImage(named: mainFighter[0].mainFighter), for: .normal)
                 loadTotalRecord(mainFighter: mainFighter[0].mainFighter)
             }
@@ -58,11 +63,8 @@ class MainFighterViewController: AnalyzeViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        fighterButton.layer.masksToBounds = true
-        fighterButton.layer.borderWidth = 4
-        fighterButton.layer.borderColor = UIColor.orange.cgColor
-        fighterButton.layer.cornerRadius = (fighterButton.frame.size.width) / 2
-        fighterButton.imageEdgeInsets = UIEdgeInsets(top: -10, left: -100, bottom: -10, right: -30)
+        
+        adjustButtonImage()
     }
     
     
@@ -106,6 +108,17 @@ class MainFighterViewController: AnalyzeViewController {
             }
         } catch {
             print("Error saving mainFighter \(error)")
+        }
+    }
+    
+    // adjust image
+    func adjustButtonImage() {
+        fighterButton.layer.masksToBounds = true
+        fighterButton.layer.borderWidth = 4
+        fighterButton.layer.borderColor = UIColor.orange.cgColor
+        fighterButton.layer.cornerRadius = (fighterButton.frame.size.width) / 2
+        if mainFighter?.count != 0 {
+            fighterButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -100, bottom: 0, right: 0)
         }
     }
     
