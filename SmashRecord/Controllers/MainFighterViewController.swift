@@ -41,7 +41,7 @@ class MainFighterViewController: AnalyzeViewController {
         loadMainFighter()
         
         if mainFighter?.count == 0 {
-            fighterButton.setImage(UIImage(named: "mario"), for: .normal)
+            fighterButton.setImage(UIImage(), for: .normal)
             gameCountLabel.text = "-"
             winCountLabel.text = "-"
             loseCountLabel.text = "-"
@@ -54,6 +54,15 @@ class MainFighterViewController: AnalyzeViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fighterButton.layer.masksToBounds = true
+        fighterButton.layer.borderWidth = 4
+        fighterButton.layer.borderColor = UIColor.orange.cgColor
+        fighterButton.layer.cornerRadius = (fighterButton.frame.size.width) / 2
+        fighterButton.imageEdgeInsets = UIEdgeInsets(top: -10, left: -100, bottom: -10, right: -30)
     }
     
     
@@ -69,10 +78,17 @@ class MainFighterViewController: AnalyzeViewController {
         analyzeByFighters = realm.objects(AnalyzeByFighter.self)
         analyzeByFighters = analyzeByFighters?.filter("myFighter == %@", mainFighter)
         if let analyzeByFighters = analyzeByFighters {
-            gameCountLabel.text = "\(analyzeByFighters[0].gameCount)"
-            winCountLabel.text = "\(analyzeByFighters[0].winCount)"
-            loseCountLabel.text = "\(analyzeByFighters[0].loseCount)"
-            winRateLabel.text = "\(analyzeByFighters[0].winRate)%"
+            if analyzeByFighters[0].gameCount != 0 {
+                gameCountLabel.text = "\(analyzeByFighters[0].gameCount)"
+                winCountLabel.text = "\(analyzeByFighters[0].winCount)"
+                loseCountLabel.text = "\(analyzeByFighters[0].loseCount)"
+                winRateLabel.text = "\(analyzeByFighters[0].winRate)%"
+            } else {
+                gameCountLabel.text = "-"
+                winCountLabel.text = "-"
+                loseCountLabel.text = "-"
+                winRateLabel.text = "-"
+            }
         }
     }
     
@@ -116,7 +132,7 @@ extension MainFighterViewController: UITableViewDataSource, UITableViewDelegate 
         
         if indexPath.section == 0 {
             
-            cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])
+            cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 0))
             
             if let mainFighter = mainFighter {
                 
@@ -151,7 +167,7 @@ extension MainFighterViewController: UITableViewDataSource, UITableViewDelegate 
             }
         } else {
             
-            cell.fighterLabel.image = UIImage(named: S.stageArray[indexPath.row])?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -50, bottom: 0, right: 0))
+            cell.fighterLabel.image = UIImage(named: S.stageArray[indexPath.row])
             
             if let mainFighter = mainFighter {
                 if mainFighter.count != 0 {
