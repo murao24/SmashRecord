@@ -17,7 +17,15 @@ class AnalyzeViewController: UIViewController {
     var analyzeByFighters: Results<AnalyzeByFighter>?
     var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
     var analyzeByStages: Results<AnalyzeByStage>?
-
+    var mainFighter: Results<MainFighter>?
+    var masterRecord: Results<Record>?
+    var winRecord: Results<Record>?
+    var byStageRecord: Results<Record>?
+    var winRecordByStage: Results<Record>?
+    
+    var r:[[Any]] = [[]]
+    var s:[[Any]] = [[]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -154,6 +162,72 @@ class AnalyzeViewController: UIViewController {
 
         }
 
+    }
+    
+    
+    // For mainFighter
+    func loadMainFighter() {
+        r = [[]]
+        s = [[]]
+        mainFighter = realm.objects(MainFighter.self)
+        records = realm.objects(Record.self)
+
+        if mainFighter?.count != 0 {
+            if let mainFighter = mainFighter?[0].mainFighter {
+                
+                // load mainFighter
+                for i in 0...S.fightersArray.count - 1 {
+                    // search mainFighter
+                    records = records?.filter("myFighter == %@", mainFighter)
+                    // search mainFighter * opponentFighter
+                    masterRecord = records?.filter("opponentFighter == %@", S.fightersArray[i][1])
+                    // search win
+                    winRecord = masterRecord?.filter("result == 1")
+                    
+                    if let masterRecord = masterRecord {
+                        
+                        // recordがある
+                        if masterRecord.count != 0 {
+                            if let winRecord = winRecord {
+                                if winRecord.count != 0 {
+                                    r.append([mainFighter, S.fightersArray[i][1], masterRecord.count, winRecord.count])
+                                } else {
+                                    r.append([mainFighter, S.fightersArray[i][1], masterRecord.count, 0])
+                                }
+                            }
+                        // recordがない
+                        } else {
+                            r.append([mainFighter, S.fightersArray[i][1], 0, 0])
+                        }
+                    }
+                }
+                
+                // load stage
+                for i in 0...S.stageArray.count - 1 {
+                    // search mainFighter
+                    records = records?.filter("myFighter == %@", mainFighter)
+                    // search mainFightre * stage
+                    byStageRecord = records?.filter("stage == %@", S.stageArray[i])
+                    // search win
+                    winRecordByStage = byStageRecord?.filter("result == 1")
+                    
+                    if let byStageRecord = byStageRecord {
+                        // recordがある
+                        if byStageRecord.count != 0 {
+                            if let winRecordByStage = winRecordByStage {
+                                if winRecordByStage.count != 0 {
+                                    s.append([mainFighter, S.stageArray[i], byStageRecord.count, winRecordByStage.count])
+                                } else {
+                                    s.append([mainFighter, S.stageArray[i], byStageRecord, 0])
+                                }
+                            }
+                        } else {
+                            s.append([mainFighter, S.stageArray[i], 0, 0])
+                        }
+                    }
+                }
+            }
+        }
     }
     
     

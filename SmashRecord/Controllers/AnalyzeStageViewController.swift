@@ -52,7 +52,7 @@ extension AnalyzeStageViewController: UITableViewDataSource
         
         if let analyzeByStages = analyzeByStages?[indexPath.row] {
             
-            cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
+            cell.fighterLabel.image = UIImage(named: analyzeByStages.stage)?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
             
             guard analyzeByStages.gameCount != 0 else {
                 cell.gameCountLabel.text = "-"
