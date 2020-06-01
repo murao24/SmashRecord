@@ -118,7 +118,7 @@ class MainFighterViewController: AnalyzeViewController {
         fighterButton.layer.borderColor = UIColor.orange.cgColor
         fighterButton.layer.cornerRadius = (fighterButton.frame.size.width) / 2
         if mainFighter?.count != 0 {
-            fighterButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -100, bottom: 0, right: 0)
+            fighterButton.imageEdgeInsets = UIEdgeInsets(top: 30, left: -70, bottom: 30, right: 0)
         }
     }
     
@@ -133,6 +133,10 @@ extension MainFighterViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfSections[section]
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .darkGray
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
